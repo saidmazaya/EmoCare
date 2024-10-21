@@ -7,3 +7,4 @@
 ### Anggota
 - **Said Muhammad Mazaya (221402129)**
 - **Nurul Aini (221402005)**
+- **Aulia Halimatusyaddiah (221402014)**

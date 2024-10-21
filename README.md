@@ -6,4 +6,4 @@
 
 ### Anggota
 - **Said Muhammad Mazaya (221402129)**
-- **Nurul Aini**
+- **Nurul Aini (221402005)**

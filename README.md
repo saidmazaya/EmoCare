@@ -6,3 +6,4 @@
 
 ### Anggota
 - **Said Muhammad Mazaya**
+- **Nurul Aini**

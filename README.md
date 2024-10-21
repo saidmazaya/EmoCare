@@ -5,5 +5,5 @@
 # EmoCare
 
 ### Anggota
-- **Said Muhammad Mazaya**
+- **Said Muhammad Mazaya (221402129)**
 - **Nurul Aini**

@@ -1,14 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EmotFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Halaman EmoT" />
+        android:id="@+id/tv_kalenderMood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Halaman EmoT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_kalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_kalenderMood">
+
+        <CalendarView
+            android:id="@+id/kalenderEmoT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Updated Buttons for Emoticons -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_emotBahagia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_kalendar">
+
+        <Button
+            android:id="@+id/btn_emotBahagia"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:text="😁"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_emotSedih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="@id/cv_emotBahagia"
+        app:layout_constraintTop_toBottomOf="@id/cv_kalendar">
+
+        <Button
+            android:id="@+id/btn_emotSedih"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:text="😭"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_emotNetral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="@id/cv_emotSedih"
+        app:layout_constraintTop_toBottomOf="@id/cv_kalendar">
+
+        <Button
+            android:id="@+id/btn_emotNetral"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:text="😐"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_emotKaget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="@id/cv_emotNetral"
+        app:layout_constraintTop_toBottomOf="@id/cv_kalendar">
+
+        <Button
+            android:id="@+id/btn_emotKaget"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:text="😱"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_emotMual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="@id/cv_emotKaget"
+        app:layout_constraintTop_toBottomOf="@id/cv_kalendar">
+
+        <Button
+            android:id="@+id/btn_emotMual"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:text="🤢"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_emotMarah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="@id/cv_emotMual"
+        app:layout_constraintTop_toBottomOf="@id/cv_kalendar">
+
+        <Button
+            android:id="@+id/btn_emotMarah"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:text="😡"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Buttons with Arrow Icons -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/secondaryColor"
+        android:elevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_emotMarah">
+
+        <TextView
+            android:id="@+id/tv_tesJiwa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunitobold"
+            android:text="@string/tes_kesehatan_jiwa_anda"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="@color/white"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:padding="8dp"
+                android:src="@drawable/gangguankecemasan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:padding="8dp"
+                android:text="@string/tes_gangguan_kecemasan"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="62dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/nunitoregular"
+                android:padding="8dp"
+                android:text="@string/tes_untuk_mengecek_amp_mengukur_gejala_gangguan_kecemasan"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_arrowGangguanKecemasan"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="250dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/baseline_arrow_forward_ios_24" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/white"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:padding="8dp"
+                android:src="@drawable/depresi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:padding="8dp"
+                android:text="@string/tes_depresi"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="214dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="62dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/nunitoregular"
+                android:padding="8dp"
+                android:text="@string/tes_untuk_mengecek"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_arrowDepresi"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="250dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/baseline_arrow_forward_ios_24" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

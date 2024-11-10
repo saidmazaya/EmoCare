@@ -19,7 +19,14 @@
         android:id="@+id/emotFragment"
         android:name="com.emocare.application.EmotFragment"
         android:label="fragment_emot"
-        tools:layout="@layout/fragment_emot" />
+        tools:layout="@layout/fragment_emot">
+        <action
+            android:id="@+id/action_emotFragment_to_gangguanKecemasan"
+            app:destination="@id/gangguanKecemasan" />
+        <action
+            android:id="@+id/action_emotFragment_to_depresiFragment"
+            app:destination="@id/depresiFragment" />
+    </fragment>
     <fragment
         android:id="@+id/counselingFragment"
         android:name="com.emocare.application.CounselingFragment"
@@ -30,4 +37,26 @@
         android:name="com.emocare.application.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/gangguanKecemasan"
+        android:name="com.emocare.application.gangguanKecemasan"
+        android:label="fragment_gangguan_kecemasan"
+        tools:layout="@layout/fragment_gangguan_kecemasan">
+        <argument
+            android:name="isNavigatedFromEmot"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_gangguanKecemasan_to_emotFragment"
+            app:destination="@id/emotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/depresiFragment"
+        android:name="com.emocare.application.depresiFragment"
+        android:label="fragment_depresi"
+        tools:layout="@layout/fragment_depresi">
+        <action
+            android:id="@+id/action_depresiFragment_to_emotFragment"
+            app:destination="@id/emotFragment" />
+    </fragment>
 </navigation>

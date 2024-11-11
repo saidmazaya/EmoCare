@@ -1,6 +1,11 @@
 <resources>
+    <string name="app_name">EmoCare</string>
+    <string-array name="gender_array">
+        <item>Pilih Gender</item>
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
     <string name="app_name">Emo Care</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="emo_t">Emo-T</string>
     <string name="explore">Explore</string>
@@ -12,7 +17,6 @@
     <string name="tes_untuk_mengecek_amp_mengukur_gejala_gangguan_kecemasan"><![CDATA[Tes untuk mengecek & mengukur gejala gangguan kecemasan]]></string>
     <string name="tes_depresi">Tes Depresi</string>
     <string name="tes_untuk_mengecek"><![CDATA[Tes untuk mengecek & mengukur gejala depresi]]></string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>

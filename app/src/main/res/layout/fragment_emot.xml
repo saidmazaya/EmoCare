@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="16dp"
+        style="@style/BoldText"
         android:text="Halaman EmoT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
@@ -181,7 +182,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/nunitobold"
+            android:fontFamily="@font/nunitoblack"
             android:text="@string/tes_kesehatan_jiwa_anda"
             android:textAlignment="center"
             android:textSize="12sp" />
@@ -207,6 +208,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
+                android:fontFamily="@font/nunitoblack"
                 android:padding="8dp"
                 android:text="@string/tes_gangguan_kecemasan"
                 android:textSize="16sp" />
@@ -216,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="62dp"
                 android:layout_marginTop="32dp"
-                android:fontFamily="@font/nunitoregular"
+                android:fontFamily="@font/nunitosemibold"
                 android:padding="8dp"
                 android:text="@string/tes_untuk_mengecek_amp_mengukur_gejala_gangguan_kecemasan"
                 android:textSize="12sp" />
@@ -252,6 +254,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
+                android:fontFamily="@font/nunitoblack"
                 android:padding="8dp"
                 android:text="@string/tes_depresi"
                 android:textSize="16sp" />
@@ -261,7 +264,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="62dp"
                 android:layout_marginTop="32dp"
-                android:fontFamily="@font/nunitoregular"
+                android:fontFamily="@font/nunitosemibold"
                 android:padding="8dp"
                 android:text="@string/tes_untuk_mengecek"
                 android:textSize="12sp" />

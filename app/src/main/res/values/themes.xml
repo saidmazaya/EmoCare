@@ -3,7 +3,6 @@
     <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:windowBackground">@color/white</item>
         <item name="android:statusBarColor">@color/white</item>
-        <item name="fontFamily">@font/nunitoblack</item>
         <item name="colorPrimary">@color/md_theme_primary</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>

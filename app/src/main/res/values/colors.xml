@@ -2,6 +2,8 @@
 <resources>
     <color name="primaryColor">#9DB0CE</color>
     <color name="secondaryColor">#E9C2C5</color>
+    <color name="textlogin">#4E1041</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="buttonLR">#C36B72</color>
 </resources>

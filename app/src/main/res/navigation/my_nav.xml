@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.emocare.application.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.emocare.application.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" />
+    <fragment
+        android:id="@+id/emotFragment"
+        android:name="com.emocare.application.EmotFragment"
+        android:label="fragment_emot"
+        tools:layout="@layout/fragment_emot">
+        <action
+            android:id="@+id/action_emotFragment_to_gangguanKecemasan"
+            app:destination="@id/gangguanKecemasan" />
+        <action
+            android:id="@+id/action_emotFragment_to_depresiFragment"
+            app:destination="@id/depresiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/counselingFragment"
+        android:name="com.emocare.application.CounselingFragment"
+        android:label="fragment_counseling"
+        tools:layout="@layout/fragment_counseling" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.emocare.application.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/gangguanKecemasan"
+        android:name="com.emocare.application.gangguanKecemasan"
+        android:label="fragment_gangguan_kecemasan"
+        tools:layout="@layout/fragment_gangguan_kecemasan">
+        <argument
+            android:name="isNavigatedFromEmot"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_gangguanKecemasan_to_emotFragment"
+            app:destination="@id/emotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/depresiFragment"
+        android:name="com.emocare.application.depresiFragment"
+        android:label="fragment_depresi"
+        tools:layout="@layout/fragment_depresi">
+        <action
+            android:id="@+id/action_depresiFragment_to_emotFragment"
+            app:destination="@id/emotFragment" />
+    </fragment>
+</navigation>

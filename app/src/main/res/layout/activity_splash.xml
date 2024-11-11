@@ -45,7 +45,7 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textBelowLogo"
+        android:id="@+id/tb_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunitobold"
@@ -57,18 +57,18 @@
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.177" />
 
     <ProgressBar
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="260dp"
         android:layout_height="32dp"
+        android:layout_marginTop="12dp"
         android:indeterminate="true"
         android:indeterminateTint="@color/secondaryColor"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBelowLogo"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="536dp" />
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,14 @@
-package com.emocare.application
+package com.emocare.application.activity
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.emocare.application.R
 import java.util.Calendar
 
 class RegisterActivity : AppCompatActivity() {

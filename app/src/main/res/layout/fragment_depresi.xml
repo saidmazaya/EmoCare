@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".depresiFragment">
+    tools:context=".fragment.depresiFragment">
 
     <Button
         android:id="@+id/btn_back_depresi"
@@ -52,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:padding="16dp"
+                android:fontFamily="@font/nunitoblack"
                 android:text="@string/tes_depresi"
                 android:textAlignment="center"
                 android:textSize="14sp" />
@@ -86,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:padding="16dp"
+                android:fontFamily="@font/nunitosemibold"
                 android:text="@string/depresi_adalah_gangguan_kesehatan_mental_yang_ditandai_oleh_perasaan_sedih_yang_mendalam_kehilangan_minat_atau_kesenangan_dalam_aktivitas_sehari_hari_dan_energi_yang_rendah"
                 android:textAlignment="center"
                 android:textSize="12sp" />
@@ -110,6 +112,7 @@
                 android:layout_marginHorizontal="40dp"
                 android:background="@color/white"
                 android:padding="16dp"
+                android:fontFamily="@font/nunitoblack"
                 android:text="@string/msambi"
                 android:textAlignment="center"
                 android:textSize="14sp" />

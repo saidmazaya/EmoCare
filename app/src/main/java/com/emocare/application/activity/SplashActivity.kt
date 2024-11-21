@@ -1,4 +1,4 @@
-package com.emocare.application
+package com.emocare.application.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,7 @@ import android.os.Handler
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Looper
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.emocare.application.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

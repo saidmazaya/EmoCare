@@ -1,15 +1,13 @@
-package com.emocare.application
+package com.emocare.application.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.emocare.application.databinding.FragmentEmotBinding
+import com.emocare.application.R
 
 class EmotFragment : Fragment() {
     private lateinit var btnPindah: Button

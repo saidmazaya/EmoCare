@@ -65,4 +65,6 @@
     <string name="depresi_adalah_gangguan_kesehatan_mental_yang_ditandai_oleh_perasaan_sedih_yang_mendalam_kehilangan_minat_atau_kesenangan_dalam_aktivitas_sehari_hari_dan_energi_yang_rendah">Depresi adalah gangguan kesehatan mental yang ditandai oleh perasaan sedih yang mendalam, kehilangan minat atau kesenangan dalam aktivitas sehari-hari, dan energi yang rendah</string>
     <string name="msambi">Merasa sedih atau murung belakangan ini?</string>
     <string name="detail_jelas_dpr">Jangan biarkan kegelapan merayap dalam kehidupan Anda. Tes depresi dapat memberikan wawasan tentang apa yang mungkin memengaruhi kesejahteraan mental Anda. Ambil kontrol, temukan jawaban!</string>
+    <string name="dalam_2_minggu_terakhir">Dalam 2 minggu terakhir,</string>
+    <string name="seberapa_sering_kamu_merasa_terganggu_oleh_hal_berikut">Seberapa sering kamu merasa terganggu oleh hal berikut...</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.emocare.application
+package com.emocare.application.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.emocare.application.R
 import com.emocare.application.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

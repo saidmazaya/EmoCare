@@ -1,4 +1,4 @@
-package com.emocare.application
+package com.emocare.application.model
 
 data class ChatModel(
     val doctorName: String,

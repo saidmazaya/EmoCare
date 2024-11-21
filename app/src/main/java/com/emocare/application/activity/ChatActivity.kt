@@ -1,11 +1,12 @@
-package com.emocare.application
+package com.emocare.application.activity
 
-import ChatAdapter
+import com.emocare.application.adapter.ChatAdapter
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.emocare.application.model.ChatModel
+import com.emocare.application.R
 
 class ChatActivity : AppCompatActivity() {
 

@@ -67,4 +67,26 @@
     <string name="detail_jelas_dpr">Jangan biarkan kegelapan merayap dalam kehidupan Anda. Tes depresi dapat memberikan wawasan tentang apa yang mungkin memengaruhi kesejahteraan mental Anda. Ambil kontrol, temukan jawaban!</string>
     <string name="dalam_2_minggu_terakhir">Dalam 2 minggu terakhir,</string>
     <string name="seberapa_sering_kamu_merasa_terganggu_oleh_hal_berikut">Seberapa sering kamu merasa terganggu oleh hal berikut...</string>
+
+    <string-array name="data_questions">
+        <item>Merasa gugup, cemas, atau gelisah?</item>
+        <item>Tidak dapat menghentikan atau mengontrol kekhawatiran?</item>
+        <item>Terlalu banyak mengkhawatirkan berbagai hal?</item>
+        <item>Sulit merasa santai?</item>
+        <item>Merasa kurang istirahat hingga sulit untuk diam?</item>
+        <item>Mudah kesal atau marah?</item>
+        <item>Merasa takut hal buruk akan terjadi?</item>
+    </string-array>
+
+    <string-array name="data_questions_dp">
+        <item>Kurang senang atau tertarik dalam kegiatan sehari-hari?</item>
+        <item>Merasa sedih, muram, dan putus asa?</item>
+        <item>Sulit tidur atau tidur nyenyak; atau terlalu banyak tidur?</item>
+        <item>Merasa lelah atau kekurangan energi?</item>
+        <item>Tidak napsu makan, atau terlalu banyak makan?</item>
+        <item>Merasa buruk tentang diri sendiri, atau merasa gagal atau mengecewakan diri atau keluargamu?</item>
+        <item>Kesulitan berkonsentrasi, seperti saat membaca koran atau menonton TV?</item>
+        <item>Bergerak atau berbicara dengan lambat hingga orang lain menyadarinya? Atau merasa kurang istirahat dan tidak bisa diam lebih dari biasanya?</item>
+        <item>Merasa lebih baik mati, atau berpikir ingin menyakiti diri sendiri?</item>
+    </string-array>
 </resources>

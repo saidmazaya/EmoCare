@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.emocare.application.adapter.QuestionViewAdapter
 import com.emocare.application.R
+import com.emocare.application.adapter.Question
 import com.emocare.application.placeholder.PlaceholderContent
 
 /**
@@ -17,14 +18,8 @@ import com.emocare.application.placeholder.PlaceholderContent
  */
 class QuestionFragment : Fragment() {
 
-    private var columnCount = 1
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
-        }
     }
 
     override fun onCreateView(
@@ -36,28 +31,17 @@ class QuestionFragment : Fragment() {
         // Set the adapter
         if (view is RecyclerView) {
             with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
+//                layoutManager = when {
+//                    columnCount <= 1 -> LinearLayoutManager(context)
+//                    else -> GridLayoutManager(context, columnCount)
+//                }
+                val listQuestion = mutableListOf<Question>()
+                val dataQuestion = resources.getStringArray(R.array.data_questions)
+                for (i in dataQuestion.indices) {
+                    listQuestion.add(Question(dataQuestion[i]))
                 }
-                adapter = QuestionViewAdapter(PlaceholderContent.ITEMS)
             }
         }
         return view
-    }
-
-    companion object {
-
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
-
-        // TODO: Customize parameter initialization
-        @JvmStatic
-        fun newInstance(columnCount: Int) =
-            QuestionFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARG_COLUMN_COUNT, columnCount)
-                }
-            }
     }
 }

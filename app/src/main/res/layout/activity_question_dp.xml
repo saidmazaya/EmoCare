@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryColor"
-    tools:context=".activity.QuestionGkActivity">
+    tools:context=".activity.QuestionDpActivity">
 
     <Button
-        android:id="@+id/btn_back_tes_gangguan_kecemasan"
+        android:id="@+id/btn_back_tes_depresi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

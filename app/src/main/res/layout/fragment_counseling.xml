@@ -145,7 +145,7 @@
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/nunitobold"
                             android:gravity="center"
-                            android:text="Keluarga & Hubungan"
+                            android:text="Keluarga dan Hubungan"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -162,7 +162,7 @@
                         <ImageView
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:src="@drawable/ic_trauma"/>
+                            android:src="@drawable/ic_trauma" />
 
                         <TextView
                             android:layout_width="wrap_content"

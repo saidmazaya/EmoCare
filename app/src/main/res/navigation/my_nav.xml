@@ -50,8 +50,8 @@
             android:id="@+id/action_gangguanKecemasan_to_emotFragment"
             app:destination="@id/emotFragment" />
         <action
-            android:id="@+id/action_gangguanKecemasan_to_questiongk"
-            app:destination="@id/questiongk" />
+            android:id="@+id/action_gangguanKecemasan_to_hasilTesGkFragment"
+            app:destination="@id/hasilTesGkFragment" />
     </fragment>
     <fragment
         android:id="@+id/depresiFragment"
@@ -63,8 +63,28 @@
             app:destination="@id/emotFragment" />
     </fragment>
     <fragment
-        android:id="@+id/questiongk"
-        android:name="com.emocare.application.Questiongk"
-        android:label="fragment_questiongk"
-        tools:layout="@layout/fragment_questiongk" />
+        android:id="@+id/hasilTesGkFragment"
+        android:name="com.emocare.application.fragment.HasilTesGkFragment"
+        android:label="fragment_hasil_tes_gk"
+        tools:layout="@layout/fragment_hasil_tes_gk">
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="testType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_hasilTesGkFragment_to_emotFragment"
+            app:destination="@id/emotFragment" />
+        <action
+            android:id="@+id/action_hasilTesGkFragment_to_gangguanKecemasan"
+            app:destination="@id/gangguanKecemasan" />
+        <action
+            android:id="@+id/action_hasilTesGkFragment_to_depresiFragment"
+            app:destination="@id/depresiFragment" />
+        <action
+            android:id="@+id/action_hasilTesGkFragment_to_counselingFragment"
+            app:destination="@id/counselingFragment"
+            app:popUpTo="@id/emotFragment" />
+    </fragment>
 </navigation>

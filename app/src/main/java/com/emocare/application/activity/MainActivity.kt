@@ -2,10 +2,13 @@ package com.emocare.application.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.NavOptions
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.emocare.application.R
@@ -52,7 +55,41 @@ class MainActivity : AppCompatActivity() {
                 .findFragmentById(R.id.navhost_home) as NavHostFragment
 
             binding.navBottom.setupWithNavController(navHost.navController)
-        }
 
+            // Tangkap data dari Intent
+            val fragmentToLoad = intent.getStringExtra("EXTRA_FRAGMENT")
+            val score = intent.getIntExtra("EXTRA_SCORE", 0)
+            val testType = intent.getStringExtra("EXTRA_TEST_TYPE")
+            val navController = navHost.navController
+
+
+            if (fragmentToLoad == "HasilTesGkFragment") {
+                val bundle = Bundle().apply {
+                    putInt("score", score) // Sesuaikan nama argumen
+                    putString("testType", testType)
+                }
+                Log.d(
+                    "MainActivity",
+                    "Fragment: $fragmentToLoad, Score: $score, TestType: $testType"
+                )
+
+                // Menggunakan popUpTo untuk menghapus fragment sebelumnya dan memastikan hanya satu fragment
+                val navOptions = NavOptions.Builder()
+                    .setPopUpTo(
+                        R.id.homeFragment,
+                        true
+                    ) // Pastikan semua fragment dihapus hingga HomeFragment
+                    .build()
+
+                navController.navigate(R.id.hasilTesGkFragment, bundle, navOptions)
+            }
+
+            navController.addOnDestinationChangedListener { _, destination, _ ->
+                // Cek apakah fragment yang dipilih adalah HasilTesGkFragment
+                if (destination.id == R.id.hasilTesGkFragment) {
+                    binding.navBottom.menu.findItem(R.id.homeFragment)?.isChecked = false
+                }
+            }
+        }
     }
 }

@@ -5,6 +5,12 @@
     <color name="textlogin">#4E1041</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="red_track">#FA233B</color>
+    <color name="orange_track">#FD8C46</color>
+    <color name="yellow_track">#FEBC44</color>
+    <color name="light_green_track">#8DC64A</color>
+    <color name="green_track">#5EB752</color>
     <color name="buttonLR">#C36B72</color>
     <color name="md_theme_primary">#3A608F</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>

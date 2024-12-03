@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.emocare.application.R
 import com.emocare.application.activity.QuestionGkActivity
+import com.emocare.application.singleton.DataSingleton
 
 class gangguanKecemasan : Fragment() {
     private lateinit var btnPindah: Button
@@ -29,6 +31,9 @@ class gangguanKecemasan : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (DataSingleton.score != null) {
+            findNavController().navigate(R.id.action_gangguanKecemasan_to_hasilTesGkFragment)
+        }
         btnPindah = view.findViewById(R.id.btn_back_gangguan_kecemasan)
         btnPindah.setOnClickListener {
             // Memastikan untuk menghapus fragment sebelumnya di backstack

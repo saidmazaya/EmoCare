@@ -1,6 +1,8 @@
 package com.emocare.application.activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +13,7 @@ import com.emocare.application.adapter.Question
 import com.emocare.application.adapter.QuestionViewAdapter
 import com.emocare.application.databinding.ActivityQuestionDpBinding
 import com.emocare.application.databinding.ActivityQuestionGkBinding
+import com.emocare.application.singleton.DataSingleton
 
 class QuestionDpActivity : AppCompatActivity() {
 
@@ -31,5 +34,26 @@ class QuestionDpActivity : AppCompatActivity() {
         }
 
         binding.rvQuestion.adapter = QuestionViewAdapter(listQuestion)
+
+        binding.btnBackTesDepresi.setOnClickListener {
+            finish()
+        }
+
+        binding.btnKirim.setOnClickListener {
+            val totalScore =
+                (binding.rvQuestion.adapter as QuestionViewAdapter).values.sumOf { it.score }
+
+            // Set nilai untuk DataSingleton
+            DataSingleton.score = totalScore
+            DataSingleton.testType = "DEPRESSION_TEST"
+
+            // Kirim data ke MainActivity
+            Intent(this, MainActivity::class.java).apply {
+                putExtra("EXTRA_FRAGMENT", "HasilTesGkFragment")
+                putExtra("EXTRA_SCORE", totalScore)
+                putExtra("EXTRA_TEST_TYPE", "DEPRESSION_TEST")
+                startActivity(this)
+            }
+        }
     }
 }

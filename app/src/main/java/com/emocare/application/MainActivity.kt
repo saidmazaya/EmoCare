@@ -2,6 +2,7 @@ package com.emocare.application
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -9,6 +10,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.emocare.application.databinding.ActivityMainBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -49,6 +53,18 @@ class MainActivity : AppCompatActivity() {
 
             val navHost = supportFragmentManager
                 .findFragmentById(R.id.navhost_home) as NavHostFragment
+
+            val doctors = listOf(
+                Doctor("dr. Amanda Charoline Sp.Kj", "Psikologi Klinis", "5 Tahun", "Rp. 50.000", R.drawable.dokter1),
+                Doctor("dr. Andi Wirawan Sp.A", "Anak", "8 Tahun", "Rp. 60.000", R.drawable.dokter2),
+                Doctor("dr. Lisa Hartono Sp.OG", "Obgyn", "10 Tahun", "Rp. 75.000", R.drawable.dokter3)
+            )
+
+            val recyclerView: RecyclerView = findViewById(R.id.rvDoctors)
+            recyclerView.layoutManager = LinearLayoutManager(this)
+            recyclerView.adapter = DoctorAdapter(doctors)
+
+
 
             binding.navBottom.setupWithNavController(navHost.navController)
         }

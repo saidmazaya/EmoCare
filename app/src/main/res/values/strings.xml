@@ -67,4 +67,7 @@
     <string name="detail_jelas_dpr">Jangan biarkan kegelapan merayap dalam kehidupan Anda. Tes depresi dapat memberikan wawasan tentang apa yang mungkin memengaruhi kesejahteraan mental Anda. Ambil kontrol, temukan jawaban!</string>
     <string name="back">baseline_arrow_back\n</string>
     <string name="doctor_image" />
+    <string name="nama_dokter">Nama Dokter</string>
+    <string name="_5_tahun">5 Tahun</string>
+    <string name="rp_50_000">Rp. 50.000</string>
 </resources>

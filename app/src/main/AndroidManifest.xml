@@ -24,9 +24,6 @@
             android:name=".activity.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ChatActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity

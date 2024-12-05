@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "916113143113",
+    "project_id": "emocare-75ed8",
+    "storage_bucket": "emocare-75ed8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916113143113:android:53c595265deedd8b4a9698",
+        "android_client_info": {
+          "package_name": "com.emocare.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDReHEg6FKGhRC9biCvdKRKJ3X4P773FZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

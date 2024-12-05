@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.emocare.application.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
     <fragment
         android:id="@+id/exploreFragment"
         android:name="com.emocare.application.fragment.ExploreFragment"
@@ -87,4 +91,9 @@
             app:destination="@id/counselingFragment"
             app:popUpTo="@id/emotFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.emocare.application.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>

@@ -1,36 +1,38 @@
 package com.emocare.application.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.emocare.application.model.ChatModel
+import com.emocare.application.ChatItem
 import com.emocare.application.R
 
-class ChatAdapter(private val chatList: List<ChatModel>) : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
+class ChatAdapter(private val chatList: List<ChatItem>) : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
 
-    // ViewHolder untuk item chat
     class ChatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val profileImage: ImageView = itemView.findViewById(R.id.profileImage)
-        val doctorName: TextView = itemView.findViewById(R.id.doctorName)
+        val senderName: TextView = itemView.findViewById(R.id.senderName)
         val lastMessage: TextView = itemView.findViewById(R.id.lastMessage)
-        val messageTime: TextView = itemView.findViewById(R.id.messageTime)
+        val timestamp: TextView = itemView.findViewById(R.id.timestamp)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_chat, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.chat_item, parent, false)
         return ChatViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
-        val chat = chatList[position]
-        holder.profileImage.setImageResource(chat.profileImage)
-        holder.doctorName.text = chat.doctorName
-        holder.lastMessage.text = chat.lastMessage
-        holder.messageTime.text = chat.messageTime
+        val chatItem = chatList[position]
+        holder.senderName.text = chatItem.senderName
+        holder.lastMessage.text = chatItem.lastMessage
+        holder.timestamp.text = chatItem.timestamp
+
+        // Handle click event for item
+
     }
 
-    override fun getItemCount(): Int = chatList.size
+    override fun getItemCount(): Int {
+        return chatList.size
+    }
 }

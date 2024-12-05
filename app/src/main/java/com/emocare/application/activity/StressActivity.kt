@@ -1,7 +1,8 @@
-package com.emocare.application
+package com.emocare.application.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.emocare.application.R
 
 class StressActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.emocare.application
+package com.emocare.application.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.emocare.application.ChatItem
+import com.emocare.application.singleton.ChatItem
 import com.emocare.application.databinding.FragmentChatBinding
 import com.emocare.application.adapter.ChatAdapter
 

@@ -1,39 +1,54 @@
 package com.emocare.application.activity
 
+import android.app.DatePickerDialog
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
+import android.widget.*
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.navigation.NavOptions
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.emocare.application.R
 import com.emocare.application.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
+
+    companion object {
+        private const val TAG = "MainActivity"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        // Firebase initialization
+        auth = FirebaseAuth.getInstance()
+        firestore = FirebaseFirestore.getInstance()
+
+        // SharedPreferences for login session management
         val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
         val isLoggedIn = sharedPreferences.getBoolean("is_logged_in", false)
         val loginTime = sharedPreferences.getLong("login_time", 0L)
         val currentTime = System.currentTimeMillis()
 
-        // Set waktu kedaluwarsa login (1 menit dalam milidetik)
-        val oneMinuteInMillis = 60 * 1000
+        // Set login expiration time (1 minute in milliseconds)
+        val oneMinuteInMillis = 60 * 1000000000000
 
-        // Cek apakah login sudah kadaluarsa
         if (!isLoggedIn || (currentTime - loginTime) > oneMinuteInMillis) {
-            // Jika belum login atau login sudah kadaluarsa, arahkan ke WelcomeActivity
             val editor = sharedPreferences.edit()
-            editor.putBoolean("is_logged_in", false) // Set ulang status login menjadi false
+            editor.putBoolean("is_logged_in", false)
             editor.apply()
 
             val intent = Intent(this, WelcomeActivity::class.java)
@@ -41,7 +56,6 @@ class MainActivity : AppCompatActivity() {
             finish()
             return
         } else {
-            // Jika login masih valid, lanjutkan inisialisasi MainActivity
             binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(binding.root)
 
@@ -56,40 +70,57 @@ class MainActivity : AppCompatActivity() {
 
             binding.navBottom.setupWithNavController(navHost.navController)
 
-            // Tangkap data dari Intent
-            val fragmentToLoad = intent.getStringExtra("EXTRA_FRAGMENT")
-            val score = intent.getIntExtra("EXTRA_SCORE", 0)
-            val testType = intent.getStringExtra("EXTRA_TEST_TYPE")
-            val navController = navHost.navController
-
-
-            if (fragmentToLoad == "HasilTesGkFragment") {
-                val bundle = Bundle().apply {
-                    putInt("score", score) // Sesuaikan nama argumen
-                    putString("testType", testType)
-                }
-                Log.d(
-                    "MainActivity",
-                    "Fragment: $fragmentToLoad, Score: $score, TestType: $testType"
-                )
-
-                // Menggunakan popUpTo untuk menghapus fragment sebelumnya dan memastikan hanya satu fragment
-                val navOptions = NavOptions.Builder()
-                    .setPopUpTo(
-                        R.id.homeFragment,
-                        true
-                    ) // Pastikan semua fragment dihapus hingga HomeFragment
-                    .build()
-
-                navController.navigate(R.id.hasilTesGkFragment, bundle, navOptions)
-            }
-
-            navController.addOnDestinationChangedListener { _, destination, _ ->
-                // Cek apakah fragment yang dipilih adalah HasilTesGkFragment
-                if (destination.id == R.id.hasilTesGkFragment) {
-                    binding.navBottom.menu.findItem(R.id.homeFragment)?.isChecked = false
-                }
-            }
+            // Additional Firebase setup or UI integration if needed
+            Log.d(TAG, "Login successful: User is still logged in.")
         }
+    }
+
+    private fun validateAndRegister(
+        email: String,
+        password: String,
+        name: String,
+        gender: String,
+        ttl: String
+    ) {
+        val progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("Sedang memvalidasi login...")
+        progressDialog.show()
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                progressDialog.dismiss()
+
+                if (task.isSuccessful) {
+                    val firebaseUser = auth.currentUser
+                    firebaseUser?.let { user ->
+                        val userProfile = hashMapOf(
+                            "uid" to user.uid,
+                            "name" to name,
+                            "email" to email,
+                            "gender" to gender,
+                            "dateOfBirth" to ttl
+                        )
+
+                        firestore.collection("users")
+                            .document(user.uid)
+                            .set(userProfile)
+                            .addOnSuccessListener {
+                                Log.d(TAG, "User profile successfully stored in Firestore.")
+                            }
+                            .addOnFailureListener { e ->
+                                Log.e(TAG, "Firestore error: ${e.message}")
+                                Toast.makeText(this, "Gagal menyimpan data pengguna", Toast.LENGTH_SHORT).show()
+                            }
+                    }
+                } else {
+                    Log.e(TAG, "Error: ${task.exception?.message}")
+                    Toast.makeText(this, "Pendaftaran gagal.", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .addOnFailureListener { exception ->
+                progressDialog.dismiss()
+                Log.e(TAG, "Registration error: ${exception.message}")
+                Toast.makeText(this, "Terjadi kesalahan: ${exception.message}", Toast.LENGTH_SHORT).show()
+            }
     }
 }

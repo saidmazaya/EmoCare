@@ -56,8 +56,12 @@ class MainActivity : AppCompatActivity() {
 
             val doctors = listOf(
                 Doctor("dr. Amanda Charoline Sp.Kj", "Psikologi Klinis", "5 Tahun", "Rp. 50.000", R.drawable.dokter1),
-                Doctor("dr. Andi Wirawan Sp.A", "Anak", "8 Tahun", "Rp. 60.000", R.drawable.dokter2),
-                Doctor("dr. Lisa Hartono Sp.OG", "Obgyn", "10 Tahun", "Rp. 75.000", R.drawable.dokter3)
+                Doctor("dr. Alissa Sabrina Sp.A", "Anak", "8 Tahun", "Rp. 60.000", R.drawable.dokter2),
+                Doctor("dr. Lisa Hartono Sp.Kj", "Psikologi Anak", "10 Tahun", "Rp. 75.000", R.drawable.dokter3),
+                Doctor("dr. Mariana Valencia Sp.Kj", "Psikologi Klinis", "7 Tahun", "Rp. 80.000", R.drawable.dokter4),
+                Doctor("dr. Hasanah Ulayya Sp.Kj", "Psikologi Anak", "10 Tahun", "Rp. 125.000", R.drawable.dokter5),
+                Doctor("dr. Cecillia Bramasta Sp.Kj", "Psikolog Anak", "3 Tahun", "Rp. 40.000", R.drawable.dokter6),
+                Doctor("dr. Lula Farasya Sp.A", "Anak", "14 Tahun", "Rp. 350.000", R.drawable.dokter7)
             )
 
             val recyclerView: RecyclerView = findViewById(R.id.rvDoctors)

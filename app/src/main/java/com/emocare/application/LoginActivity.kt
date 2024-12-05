@@ -1,42 +1,57 @@
 package com.emocare.application
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var L_Back: ImageView
-    private lateinit var L_btn1: Button  // Inisialisasi tombol login
+    private lateinit var L_btn1: Button
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-        // Cek apakah pengguna sudah login dan apakah login telah kedaluwarsa
-        if (isLoginValid()) {
-            // Jika sudah login dan belum kedaluwarsa, langsung ke MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish() // Tutup LoginActivity agar tidak muncul lagi
-            return // Hentikan eksekusi lebih lanjut
+        // Inisialisasi Firebase Auth
+        auth = FirebaseAuth.getInstance()
+
+        // Cek apakah pengguna sudah login
+        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
+        val isLoggedIn = sharedPreferences.getBoolean("is_logged_in", false)
+
+        if (auth.currentUser != null && isLoggedIn) {
+            navigateToMainActivity()
         }
 
-        L_Back = findViewById(R.id.L_Back)
-        L_btn1 = findViewById(R.id.L_btn1)  // Temukan tombol login di layout
+        // Inisialisasi Views
+        initializeViews()
 
+        // Tambahkan Listener pada Tombol
         btnBackLoginListener()
         btnLoginListener()
     }
 
+    private fun initializeViews() {
+        L_Back = findViewById(R.id.L_Back)
+        L_btn1 = findViewById(R.id.L_btn1)
+        etEmail = findViewById(R.id.etEmail)
+        etPassword = findViewById(R.id.etPassword)
+    }
+
     private fun btnBackLoginListener() {
         L_Back.setOnClickListener {
-            // Arahkan ke WelcomeActivity saat tombol back ditekan
             val intent = Intent(this, WelcomeActivity::class.java)
             startActivity(intent)
             finish()
@@ -45,37 +60,60 @@ class LoginActivity : AppCompatActivity() {
 
     private fun btnLoginListener() {
         L_btn1.setOnClickListener {
-            // Tandai pengguna sebagai "logged in" dan arahkan ke MainActivity
-            markUserAsLoggedIn()
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+            val email = etEmail.text.toString().trim()
+            val password = etPassword.text.toString().trim()
+
+            if (email.isEmpty()) {
+                etEmail.error = "Email harus diisi"
+                etEmail.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (password.isEmpty()) {
+                etPassword.error = "Password harus diisi"
+                etPassword.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                etEmail.error = "Format email tidak valid"
+                etEmail.requestFocus()
+                return@setOnClickListener
+            }
+
+            // Lakukan autentikasi dengan Firebase
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
+
+                        // Simpan status login ke SharedPreferences
+                        saveLoginStatus()
+
+                        navigateToMainActivity()
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "Login gagal: ${task.exception?.message}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
         }
     }
 
-    // Fungsi untuk menandai pengguna sebagai "logged in" dan menyimpan waktu login
-    private fun markUserAsLoggedIn() {
+    private fun saveLoginStatus() {
         val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putBoolean("is_logged_in", true)
-        editor.putLong("login_time", System.currentTimeMillis()) // Simpan waktu login dalam milidetik
-        editor.apply()
+        sharedPreferences.edit().apply {
+            putBoolean("is_logged_in", true)
+            putLong("login_time", System.currentTimeMillis())
+        }.apply()
     }
 
-    // Fungsi untuk memeriksa apakah login masih valid (tidak kedaluwarsa)
-    private fun isLoginValid(): Boolean {
-        val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
-        val isLoggedIn = sharedPreferences.getBoolean("is_logged_in", false)
-        val loginTime = sharedPreferences.getLong("login_time", 0L)
-
-        if (!isLoggedIn) {
-            return false
-        }
-
-        // Hitung selisih waktu antara sekarang dengan waktu login
-        val currentTime = System.currentTimeMillis()
-        val oneMinuteInMillis = 60 * 1000 // 1 menit dalam milidetik
-
-        return (currentTime - loginTime) < oneMinuteInMillis
+    private fun navigateToMainActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
 }

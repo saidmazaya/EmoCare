@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -47,7 +48,13 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics.ktx)
+    implementation("com.google.firebase:firebase-auth-ktx:23.1.0")
 }

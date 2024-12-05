@@ -1,4 +1,4 @@
-package com.emocare.application
+package com.emocare.application.singleton
 
 data class ChatItem(
     val senderName: String,

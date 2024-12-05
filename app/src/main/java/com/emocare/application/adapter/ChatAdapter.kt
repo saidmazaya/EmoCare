@@ -1,12 +1,11 @@
 package com.emocare.application.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.emocare.application.ChatItem
+import com.emocare.application.singleton.ChatItem
 import com.emocare.application.R
 
 class ChatAdapter(private val chatList: List<ChatItem>) : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {

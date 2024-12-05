@@ -1,17 +1,15 @@
 package com.emocare.application.activity
 
-import android.app.DatePickerDialog
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.util.Patterns
-import android.widget.*
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.emocare.application.R
@@ -44,9 +42,10 @@ class MainActivity : AppCompatActivity() {
         val currentTime = System.currentTimeMillis()
 
         // Set login expiration time (1 minute in milliseconds)
-        val oneMinuteInMillis = 60 * 1000000000000
+        val oneMinuteInMillis = 60 * 1000
 
         if (!isLoggedIn || (currentTime - loginTime) > oneMinuteInMillis) {
+            // If not logged in or session expired, go to WelcomeActivity
             val editor = sharedPreferences.edit()
             editor.putBoolean("is_logged_in", false)
             editor.apply()
@@ -56,21 +55,53 @@ class MainActivity : AppCompatActivity() {
             finish()
             return
         } else {
+            // If logged in, continue with MainActivity setup
             binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(binding.root)
 
+            // Set up edge-to-edge layout for window insets
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
                 val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
                 v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
                 insets
             }
 
+            // Set up navigation
             val navHost = supportFragmentManager
                 .findFragmentById(R.id.navhost_home) as NavHostFragment
-
             binding.navBottom.setupWithNavController(navHost.navController)
 
-            // Additional Firebase setup or UI integration if needed
+            // Capture any data passed from the Intent
+            val fragmentToLoad = intent.getStringExtra("EXTRA_FRAGMENT")
+            val score = intent.getIntExtra("EXTRA_SCORE", 0)
+            val testType = intent.getStringExtra("EXTRA_TEST_TYPE")
+            val navController = navHost.navController
+
+            // If fragmentToLoad is set to "HasilTesGkFragment", navigate to it
+            if (fragmentToLoad == "HasilTesGkFragment") {
+                val bundle = Bundle().apply {
+                    putInt("score", score) // Adjust argument name as needed
+                    putString("testType", testType)
+                }
+                Log.d(TAG, "Fragment: $fragmentToLoad, Score: $score, TestType: $testType")
+
+                // Use popUpTo to remove previous fragments and ensure only one fragment is displayed
+                val navOptions = NavOptions.Builder()
+                    .setPopUpTo(R.id.homeFragment, true) // Remove all fragments until HomeFragment
+                    .build()
+
+
+                navController.navigate(R.id.hasilTesGkFragment, bundle, navOptions)
+            }
+
+            // Listener to change selected bottom nav item when certain fragments are displayed
+            navController.addOnDestinationChangedListener { _, destination, _ ->
+                if (destination.id == R.id.hasilTesGkFragment) {
+                    binding.navBottom.menu.findItem(R.id.homeFragment)?.isChecked = false
+                }
+            }
+
+            // Log successful login
             Log.d(TAG, "Login successful: User is still logged in.")
         }
     }

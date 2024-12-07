@@ -270,13 +270,15 @@
             android:fontFamily="@font/nunitoregular"
             android:textSize="12sp"
             android:text="Sudah Mempunyai Akun?" />
+
         <TextView
+            android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunitobold"
-            android:textSize="12sp"
             android:text=" Login"
-            android:textColor="@color/textlogin"/>
+            android:textColor="@color/textlogin"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunitobold" />
 
         </LinearLayout>
 

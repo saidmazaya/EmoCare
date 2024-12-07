@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var L_btn1: Button
     private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
+    private lateinit var tvRegister: TextView
 
     private lateinit var auth: FirebaseAuth
 
@@ -26,10 +28,8 @@ class LoginActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-        // Inisialisasi Firebase Auth
         auth = FirebaseAuth.getInstance()
 
-        // Cek apakah pengguna sudah login
         val sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE)
         val isLoggedIn = sharedPreferences.getBoolean("is_logged_in", false)
 
@@ -37,12 +37,15 @@ class LoginActivity : AppCompatActivity() {
             navigateToMainActivity()
         }
 
-        // Inisialisasi Views
         initializeViews()
 
-        // Tambahkan Listener pada Tombol
         btnBackLoginListener()
         btnLoginListener()
+
+        tvRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initializeViews() {
@@ -50,11 +53,11 @@ class LoginActivity : AppCompatActivity() {
         L_btn1 = findViewById(R.id.L_btn1)
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
+        tvRegister = findViewById(R.id.tvRegister) // ID disesuaikan
     }
 
     private fun btnBackLoginListener() {
         L_Back.setOnClickListener {
-            // Arahkan ke WelcomeActivity saat tombol back ditekan
             val intent = Intent(this, WelcomeActivity::class.java)
             startActivity(intent)
             finish()
@@ -84,15 +87,11 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Lakukan autentikasi dengan Firebase
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
-
-                        // Simpan status login ke SharedPreferences
                         saveLoginStatus()
-
                         navigateToMainActivity()
                     } else {
                         Toast.makeText(

@@ -27,6 +27,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var etPassword: EditText
     private lateinit var etKPassword: EditText
     private lateinit var genderSpinner: Spinner
+    private lateinit var tvLogin: TextView
 
     companion object {
         private const val TAG = "RegisterActivity"
@@ -60,6 +61,8 @@ class RegisterActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.etPassword)
         etKPassword = findViewById(R.id.etKPassword)
         genderSpinner = findViewById(R.id.Gender)
+        tvLogin = findViewById(R.id.tvLogin)
+
     }
 
     private fun setupListeners() {
@@ -74,6 +77,12 @@ class RegisterActivity : AppCompatActivity() {
 
         // Register button listener
         rBtn1.setOnClickListener { validateAndRegister() }
+
+        // Login TextView listener
+        tvLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun showDatePickerDialog() {

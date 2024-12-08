@@ -94,4 +94,56 @@
         <item>Bergerak atau berbicara dengan lambat hingga orang lain menyadarinya? Atau merasa kurang istirahat dan tidak bisa diam lebih dari biasanya?</item>
         <item>Merasa lebih baik mati, atau berpikir ingin menyakiti diri sendiri?</item>
     </string-array>
+
+    <string-array name="mental_health_quotes">
+        <item>Kamu tidak perlu mengendalikan pikiranmu. Kamu hanya harus berhenti membiarkan mereka mengendalikanmu.</item>
+        <item>Ada harapan, bahkan ketika otakmu mengatakan tidak ada.</item>
+        <item>Ingatlah, kamu lebih berani daripada yang kamu percaya, lebih kuat daripada yang terlihat, dan lebih pintar daripada yang kamu pikirkan.</item>
+        <item>Kesehatan mental adalah perjalanan, bukan tujuan akhir.</item>
+        <item>Merawat dirimu bukanlah kemewahan, itu adalah kebutuhan.</item>
+        <item>Kamu tidak sendirian. Ada orang yang peduli.</item>
+        <item>Beristirahat bukan berarti lemah; itu artinya kamu peduli pada dirimu sendiri.</item>
+        <item>Setiap hari adalah kesempatan baru untuk memulai dari awal.</item>
+        <item>Kamu lebih tangguh daripada badai yang kamu hadapi.</item>
+        <item>Jangan takut untuk meminta bantuan, itu adalah tanda kekuatan.</item>
+        <item>Kamu layak dicintai dan dihargai, hanya karena kamu ada.</item>
+        <item>Kesedihan adalah bagian dari kehidupan, tapi begitu juga kebahagiaan.</item>
+        <item>Pelan-pelan saja. Kamu tidak perlu terburu-buru untuk sembuh.</item>
+        <item>Berani untuk menjadi lemah adalah kekuatan sejati.</item>
+        <item>Kamu tidak perlu menjalani semuanya sendirian. Ada orang yang siap membantu.</item>
+        <item>Setiap langkah kecil menuju pemulihan adalah kemenangan besar.</item>
+        <item>Kamu lebih kuat dari tantangan yang kamu hadapi saat ini.</item>
+        <item>Hari ini mungkin sulit, tapi besok adalah awal yang baru.</item>
+        <item>Perasaanmu valid. Jangan pernah merasa bersalah karena merasakannya.</item>
+        <item>Bangga pada dirimu sendiri karena sudah sejauh ini.</item>
+        <item>Pikiran positif kecil dapat menjadi langkah pertama menuju perubahan besar.</item>
+        <item>Tidak apa-apa untuk berhenti sejenak dan bernapas.</item>
+        <item>Rasa sakit yang kamu rasakan sekarang adalah bagian dari proses pemulihan.</item>
+        <item>Kamu adalah cahaya di tengah kegelapan, bahkan ketika kamu tidak bisa melihatnya.</item>
+        <item>Jangan biarkan masa lalu mendefinisikan siapa dirimu sekarang.</item>
+        <item>Setiap kali kamu bangkit kembali, kamu membuktikan betapa kuatnya dirimu.</item>
+        <item>Jadilah ramah pada dirimu sendiri seperti kamu ramah pada orang lain.</item>
+        <item>Tidak ada jalan pintas menuju pemulihan, tapi setiap langkah layak untuk dijalani.</item>
+        <item>Masa sulit tidak bertahan selamanya, tapi orang tangguh bertahan.</item>
+        <item>Hidupmu memiliki tujuan, meskipun kamu belum melihatnya sekarang.</item>
+        <item>Kamu tidak ditentukan oleh kesalahan yang telah kamu buat.</item>
+        <item>Selalu ada pelangi setelah hujan lebat.</item>
+        <item>Tidak apa-apa untuk merasa tidak apa-apa. Itu adalah bagian dari proses manusiawi.</item>
+        <item>Perlakukan dirimu seperti sahabat terbaikmu—dengan cinta dan dukungan.</item>
+        <item>Ketakutan adalah bagian dari keberanian. Kamu tetap maju meski takut.</item>
+        <item>Jangan lupa untuk merayakan kemenangan kecilmu setiap hari.</item>
+        <item>Meminta bantuan tidak membuatmu lemah. Itu menunjukkan kekuatanmu.</item>
+        <item>Pemulihan bukanlah garis lurus, tapi setiap langkah ke depan sangat berarti.</item>
+        <item>Kamu memiliki hak untuk bahagia dan damai, meskipun hari ini terasa berat.</item>
+        <item>Jangan lupa bahwa kamu sudah melewati masa sulit sebelumnya. Kamu bisa melakukannya lagi.</item>
+        <item>Kamu adalah karya seni yang sedang dalam proses. Teruskan langkahmu.</item>
+        <item>Tidak ada yang salah dengan mulai lagi dari awal. Itu adalah tanda keberanian.</item>
+        <item>Kamu cukup, persis seperti dirimu saat ini.</item>
+        <item>Pemulihan dimulai dengan satu langkah kecil. Ambil langkah itu hari ini.</item>
+        <item>Tidak apa-apa untuk merasa tidak sempurna. Tidak ada manusia yang sempurna.</item>
+        <item>Kamu tidak sendirian dalam perjuanganmu. Ada orang yang siap mendukungmu.</item>
+        <item>Kamu layak mendapatkan cinta, kebahagiaan, dan kesehatan mental yang baik.</item>
+        <item>Jangan menyerah. Setiap hari adalah peluang baru untuk menemukan kebahagiaan.</item>
+    </string-array>
+
 </resources>

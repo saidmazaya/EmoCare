@@ -12,7 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.RecyclerView
 import com.emocare.application.R
+import com.emocare.application.adapter.Doctor
 import com.emocare.application.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
+    private lateinit var recyclerView: RecyclerView
 
     companion object {
         private const val TAG = "MainActivity"
@@ -154,4 +157,18 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Terjadi kesalahan: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
+    val doctors = listOf(
+        Doctor("dr. Amanda Charoline Sp.Kj", "Psikolog Klinis", "5 Tahun", "Rp. 50.000", R.drawable.dokter1),
+        Doctor("dr. Andi Wirawan Sp.A", "Psikolog Anak", "8 Tahun", "Rp. 60.000", R.drawable.dokter2),
+        Doctor("dr. Lisa Hartono Sp.Kj", "Psikolog Klinis", "10 Tahun", "Rp. 75.000", R.drawable.dokter3),
+        Doctor("dr. Rian Prasetya Sp.A", "Psikolog Anak", "6 Tahun", "Rp. 55.000", R.drawable.dokter4),
+        Doctor("dr. Nadira Mahendra Sp.Kj", "Psikolog Klinis", "7 Tahun", "Rp. 65.000", R.drawable.dokter5),
+        Doctor("dr. Fahri Ramadhan Sp.A", "Psikolog Anak", "9 Tahun", "Rp. 70.000", R.drawable.dokter6),
+        Doctor("dr. Silvia Anggraini Sp.Kj", "Psikolog Klinis", "12 Tahun", "Rp. 80.000", R.drawable.dokter7)
+    )
+
+//    val recyclerView: RecyclerView = findViewById(R.id.rvDoctors)
+//    recyclerView.layoutManager = LinearLayoutManager(this)
+//    recyclerView.adapter = DoctorAdapter(doctors)
 }

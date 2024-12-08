@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.NavController
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -101,6 +102,37 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            binding.navBottom.setOnItemSelectedListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.homeFragment -> {
+                        navController.navigateWithClearStack(R.id.homeFragment)
+                        true
+                    }
+
+                    R.id.exploreFragment -> {
+                        navController.navigateWithClearStack(R.id.exploreFragment)
+                        true
+                    }
+
+                    R.id.emotFragment -> {
+                        navController.navigateWithClearStack(R.id.emotFragment)
+                        true
+                    }
+
+                    R.id.counselingFragment -> {
+                        navController.navigateWithClearStack(R.id.counselingFragment)
+                        true
+                    }
+
+                    R.id.accountFragment -> {
+                        navController.navigateWithClearStack(R.id.accountFragment)
+                        true
+                    }
+
+                    else -> false
+                }
+            }
+
             // Log successful login
             Log.d(TAG, "Login successful: User is still logged in.")
         }
@@ -140,7 +172,11 @@ class MainActivity : AppCompatActivity() {
                             }
                             .addOnFailureListener { e ->
                                 Log.e(TAG, "Firestore error: ${e.message}")
-                                Toast.makeText(this, "Gagal menyimpan data pengguna", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(
+                                    this,
+                                    "Gagal menyimpan data pengguna",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                     }
                 } else {
@@ -151,7 +187,19 @@ class MainActivity : AppCompatActivity() {
             .addOnFailureListener { exception ->
                 progressDialog.dismiss()
                 Log.e(TAG, "Registration error: ${exception.message}")
-                Toast.makeText(this, "Terjadi kesalahan: ${exception.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Terjadi kesalahan: ${exception.message}", Toast.LENGTH_SHORT)
+                    .show()
             }
+    }
+
+    private fun NavController.navigateWithClearStack(destinationId: Int) {
+        val navOptions = NavOptions.Builder()
+            .setPopUpTo(
+                graph.startDestinationId,
+                true
+            ) // Clear all fragments until the start destination
+            .setLaunchSingleTop(true) // Prevent duplicate fragments
+            .build()
+        this.navigate(destinationId, null, navOptions)
     }
 }

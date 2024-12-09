@@ -166,7 +166,7 @@ class HasilTesGkFragment : Fragment() {
         slider: Slider,
         testConfig: TestConfig
     ) {
-        // Update the score text
+        // Update the score textF
         tvSkor.text = "Skor kamu: $score"
 
         // Determine the color and description based on the score range

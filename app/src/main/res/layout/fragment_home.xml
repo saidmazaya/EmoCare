@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragment.HomeFragment">
+
+        <TextView
+            android:id="@+id/tv_hello_user"
+            style="@style/ExtraBoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="Halo user"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:padding="16dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_hello_user">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Game Button with Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btn_counselling"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Game Button"
+                        android:src="@drawable/ic_counselling" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/nunitobold"
+                        android:gravity="center"
+                        android:text="Konseling"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Chat Button with Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btn_chat"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Chat Button"
+                        android:src="@drawable/ic_chat_bubble" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/nunitobold"
+                        android:gravity="center"
+                        android:text="Emo Chat"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Clipboard Button with Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btn_tes_kejiwaan"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Tes Kejiawaan"
+                        android:src="@drawable/ic_clipboard" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/nunitobold"
+                        android:gravity="center"
+                        android:text="Tes Kejiwaan"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- News Button with Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btn_artikel_home"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/ic_newspaper"
+                        android:contentDescription="News Button" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/nunitobold"
+                        android:gravity="center"
+
+                        android:text="Artikel"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Additional Button with Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/img_btn_temui_psikolog"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/ic_doctor"
+                        android:contentDescription="Temui Psikolog" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/nunitobold"
+                        android:gravity="center"
+                        android:text="Temui Psikolog"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tv_katamotivasi"
+            style="@style/ExtraBoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="188dp"
+            android:text="Kata motivasi buat kamu "
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_quotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tv_katamotivasi"
+            tools:listitem="@layout/item_quote_card" />
+
+        <TextView
+            android:id="@+id/tv_moodharini"
+            style="@style/ExtraBoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gimana mood kamu hari ini?"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_quotes" />
+
+        <!-- Emoji Bahagia -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_emotBahagia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_moodharini">
+
+            <Button
+                android:id="@+id/btn_emotBahagia"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:text="😁"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_emotBahagia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center"
+            android:text="Senang"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/cv_emotBahagia"
+            app:layout_constraintStart_toStartOf="@id/cv_emotBahagia"
+            app:layout_constraintTop_toBottomOf="@id/cv_emotBahagia" />
+
+        <!-- Emoji Sedih -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_emotSedih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintStart_toEndOf="@id/cv_emotBahagia"
+            app:layout_constraintTop_toBottomOf="@id/tv_moodharini">
+
+            <Button
+                android:id="@+id/btn_emotSedih"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:text="😭"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_emotSedih"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center"
+            android:text="Sedih"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/cv_emotSedih"
+            app:layout_constraintStart_toStartOf="@id/cv_emotSedih"
+            app:layout_constraintTop_toBottomOf="@id/cv_emotSedih" />
+
+        <!-- Emoji Netral -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_emotNetral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintStart_toEndOf="@id/cv_emotSedih"
+            app:layout_constraintTop_toBottomOf="@id/tv_moodharini">
+
+            <Button
+                android:id="@+id/btn_emotNetral"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:text="😐"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_emotNetral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center"
+            android:text="Netral"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/cv_emotNetral"
+            app:layout_constraintStart_toStartOf="@id/cv_emotNetral"
+            app:layout_constraintTop_toBottomOf="@id/cv_emotNetral" />
+
+        <!-- Emoji Kaget -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_emotKaget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintStart_toEndOf="@id/cv_emotNetral"
+            app:layout_constraintTop_toBottomOf="@id/tv_moodharini">
+
+            <Button
+                android:id="@+id/btn_emotKaget"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:text="😱"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_emotKaget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center"
+            android:text="Kaget"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/cv_emotKaget"
+            app:layout_constraintStart_toStartOf="@id/cv_emotKaget"
+            app:layout_constraintTop_toBottomOf="@id/cv_emotKaget" />
+
+        <!-- Emoji Mual -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_emotMual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintStart_toEndOf="@id/cv_emotKaget"
+            app:layout_constraintTop_toBottomOf="@id/tv_moodharini">
+
+            <Button
+                android:id="@+id/btn_emotMual"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:text="🤢"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_emotMual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center"
+            android:text="Sakit"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/cv_emotMual"
+            app:layout_constraintStart_toStartOf="@id/cv_emotMual"
+            app:layout_constraintTop_toBottomOf="@id/cv_emotMual" />
+
+        <!-- Emoji Mual -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_emotMarah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintStart_toEndOf="@id/cv_emotMual"
+            app:layout_constraintTop_toBottomOf="@id/tv_moodharini">
+
+            <Button
+                android:id="@+id/btn_emotMarah"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:text="😡"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_emotMarah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/nunitobold"
+            android:gravity="center"
+            android:text="Marah"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/cv_emotMarah"
+            app:layout_constraintStart_toStartOf="@id/cv_emotMarah"
+            app:layout_constraintTop_toBottomOf="@id/cv_emotMarah" />
+
+        <TextView
+            android:id="@+id/tv_mungkinkamubutuhini"
+            style="@style/ExtraBoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Mungkin kamu butuh ini"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emotMarah" />
+
+        <!-- Horizontal Scroll View -->
+        <HorizontalScrollView
+            android:id="@+id/hv_mungkin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="16dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_mungkinkamubutuhini">
+
+            <!-- LinearLayout untuk isi CardView -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- MaterialCardView 1 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="false"
+                    app:strokeColor="@color/secondaryColor"
+                    app:strokeWidth="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- MaterialCardView untuk Image -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            app:cardCornerRadius="100dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/secondaryColor"
+                            app:strokeWidth="0dp">
+
+                            <ImageView
+                                android:id="@+id/iv_tesKejiwaan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_meditation" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Descriptive Text -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/nunitobold"
+                            android:gravity="center"
+                            android:text="Jelajahi diri, buka pintu wawasan baru, dan temukan keunikanmu!"
+                            android:textAlignment="center"
+                            android:textColor="#5F5252"
+                            android:textSize="14sp" />
+
+                        <!-- MaterialCardView untuk Button -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:gravity="center"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/secondaryColor"
+                            app:strokeWidth="5dp">
+
+                            <Button
+                                android:id="@+id/btn_tes_kejiwaan_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Tes Kejiwaan"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- MaterialCardView 2 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="8dp"
+                    app:strokeColor="@color/secondaryColor"
+                    app:strokeWidth="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- MaterialCardView untuk Image -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center"
+                            app:cardCornerRadius="100dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/secondaryColor"
+                            app:strokeWidth="0dp">
+
+                            <ImageView
+                                android:id="@+id/iv_temuiPsikolog"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_twodoctor" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Descriptive Text -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/nunitobold"
+                            android:gravity="center"
+                            android:text="Mulai perjalananmu untuk keseimbangan. Temui psikolog terpercaya."
+                            android:textAlignment="center"
+                            android:textColor="#5F5252"
+                            android:textSize="14sp" />
+
+                        <!-- MaterialCardView untuk Button -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/white"
+                            android:gravity="center"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp"
+                            app:strokeColor="@color/secondaryColor"
+                            app:strokeWidth="5dp">
+
+                            <Button
+                                android:id="@+id/btn_tesmui_pisokolog_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:text="Temui Psikolog"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

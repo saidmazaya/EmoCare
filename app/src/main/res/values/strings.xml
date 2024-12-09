@@ -1,3 +1,149 @@
 <resources>
-    <string name="app_name">Emo Care</string>
+    <string name="app_name">EmoCare</string>
+    <string-array name="gender_array">
+        <item>Pilih Gender</item>
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emo_t">Emo-T</string>
+    <string name="explore">Explore</string>
+    <string name="home">Home</string>
+    <string name="counseling">Counseling</string>
+    <string name="account">Account</string>
+    <string name="tes_kesehatan_jiwa_anda">Tes Kesehatan Jiwa Anda</string>
+    <string name="tes_gangguan_kecemasan">Tes Gangguan Kecemasan</string>
+    <string name="tes_untuk_mengecek_amp_mengukur_gejala_gangguan_kecemasan"><![CDATA[Tes untuk mengecek & mengukur gejala gangguan kecemasan]]></string>
+    <string name="tes_depresi">Tes Depresi</string>
+    <string name="tes_untuk_mengecek"><![CDATA[Tes untuk mengecek & mengukur gejala depresi]]></string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="tes_gangguan_kecemasan_detail">Tes Gangguan Kecemasan</string>
+    <string name="gangguan_kecemasan_adalah_kondisi_kesehatan_mental_yang_ditandai_oleh_perasaan_cemas_yang_berlebihan_tidak_terkendali_dan_persisten">Gangguan kecemasan adalah kondisi kesehatan mental yang ditandai oleh perasaan cemas yang berlebihan, tidak terkendali, dan persisten.</string>
+    <string name="detail_jelas_gk">Ketahui lebih dalam tentang diri Anda! Tes gangguan kecemasan dapat membantu Anda memahami apakah perubahan kimia dalam otak, faktor keturunan, atau pengalaman traumatis memengaruhi kehidupan sehari-hari Anda.</string>
+    <string name="mkatb">Merasa khawatir atau takut berlebih?</string>
+    <string name="ambil_tes">Ambil Tes</string>
+    <string name="depresi_adalah_gangguan_kesehatan_mental_yang_ditandai_oleh_perasaan_sedih_yang_mendalam_kehilangan_minat_atau_kesenangan_dalam_aktivitas_sehari_hari_dan_energi_yang_rendah">Depresi adalah gangguan kesehatan mental yang ditandai oleh perasaan sedih yang mendalam, kehilangan minat atau kesenangan dalam aktivitas sehari-hari, dan energi yang rendah</string>
+    <string name="msambi">Merasa sedih atau murung belakangan ini?</string>
+    <string name="detail_jelas_dpr">Jangan biarkan kegelapan merayap dalam kehidupan Anda. Tes depresi dapat memberikan wawasan tentang apa yang mungkin memengaruhi kesejahteraan mental Anda. Ambil kontrol, temukan jawaban!</string>
+    <string name="back">baseline_arrow_back\n</string>
+    <string name="doctor_image" />
+    <string name="nama_dokter">Nama Dokter</string>
+    <string name="_5_tahun">5 Tahun</string>
+    <string name="rp_50_000">Rp. 50.000</string>
+    <string name="dalam_2_minggu_terakhir">Dalam 2 minggu terakhir,</string>
+    <string name="seberapa_sering_kamu_merasa_terganggu_oleh_hal_berikut">Seberapa sering kamu merasa terganggu oleh hal berikut...</string>
+
+    <string-array name="data_questions">
+        <item>Merasa gugup, cemas, atau gelisah?</item>
+        <item>Tidak dapat menghentikan atau mengontrol kekhawatiran?</item>
+        <item>Terlalu banyak mengkhawatirkan berbagai hal?</item>
+        <item>Sulit merasa santai?</item>
+        <item>Merasa kurang istirahat hingga sulit untuk diam?</item>
+        <item>Mudah kesal atau marah?</item>
+        <item>Merasa takut hal buruk akan terjadi?</item>
+    </string-array>
+
+    <string-array name="data_questions_dp">
+        <item>Kurang senang atau tertarik dalam kegiatan sehari-hari?</item>
+        <item>Merasa sedih, muram, dan putus asa?</item>
+        <item>Sulit tidur atau tidur nyenyak; atau terlalu banyak tidur?</item>
+        <item>Merasa lelah atau kekurangan energi?</item>
+        <item>Tidak napsu makan, atau terlalu banyak makan?</item>
+        <item>Merasa buruk tentang diri sendiri, atau merasa gagal atau mengecewakan diri atau keluargamu?</item>
+        <item>Kesulitan berkonsentrasi, seperti saat membaca koran atau menonton TV?</item>
+        <item>Bergerak atau berbicara dengan lambat hingga orang lain menyadarinya? Atau merasa kurang istirahat dan tidak bisa diam lebih dari biasanya?</item>
+        <item>Merasa lebih baik mati, atau berpikir ingin menyakiti diri sendiri?</item>
+    </string-array>
+
+    <string-array name="mental_health_quotes">
+        <item>Kamu tidak perlu mengendalikan pikiranmu. Kamu hanya harus berhenti membiarkan mereka mengendalikanmu.</item>
+        <item>Ada harapan, bahkan ketika otakmu mengatakan tidak ada.</item>
+        <item>Ingatlah, kamu lebih berani daripada yang kamu percaya, lebih kuat daripada yang terlihat, dan lebih pintar daripada yang kamu pikirkan.</item>
+        <item>Kesehatan mental adalah perjalanan, bukan tujuan akhir.</item>
+        <item>Merawat dirimu bukanlah kemewahan, itu adalah kebutuhan.</item>
+        <item>Kamu tidak sendirian. Ada orang yang peduli.</item>
+        <item>Beristirahat bukan berarti lemah; itu artinya kamu peduli pada dirimu sendiri.</item>
+        <item>Setiap hari adalah kesempatan baru untuk memulai dari awal.</item>
+        <item>Kamu lebih tangguh daripada badai yang kamu hadapi.</item>
+        <item>Jangan takut untuk meminta bantuan, itu adalah tanda kekuatan.</item>
+        <item>Kamu layak dicintai dan dihargai, hanya karena kamu ada.</item>
+        <item>Kesedihan adalah bagian dari kehidupan, tapi begitu juga kebahagiaan.</item>
+        <item>Pelan-pelan saja. Kamu tidak perlu terburu-buru untuk sembuh.</item>
+        <item>Berani untuk menjadi lemah adalah kekuatan sejati.</item>
+        <item>Kamu tidak perlu menjalani semuanya sendirian. Ada orang yang siap membantu.</item>
+        <item>Setiap langkah kecil menuju pemulihan adalah kemenangan besar.</item>
+        <item>Kamu lebih kuat dari tantangan yang kamu hadapi saat ini.</item>
+        <item>Hari ini mungkin sulit, tapi besok adalah awal yang baru.</item>
+        <item>Perasaanmu valid. Jangan pernah merasa bersalah karena merasakannya.</item>
+        <item>Bangga pada dirimu sendiri karena sudah sejauh ini.</item>
+        <item>Pikiran positif kecil dapat menjadi langkah pertama menuju perubahan besar.</item>
+        <item>Tidak apa-apa untuk berhenti sejenak dan bernapas.</item>
+        <item>Rasa sakit yang kamu rasakan sekarang adalah bagian dari proses pemulihan.</item>
+        <item>Kamu adalah cahaya di tengah kegelapan, bahkan ketika kamu tidak bisa melihatnya.</item>
+        <item>Jangan biarkan masa lalu mendefinisikan siapa dirimu sekarang.</item>
+        <item>Setiap kali kamu bangkit kembali, kamu membuktikan betapa kuatnya dirimu.</item>
+        <item>Jadilah ramah pada dirimu sendiri seperti kamu ramah pada orang lain.</item>
+        <item>Tidak ada jalan pintas menuju pemulihan, tapi setiap langkah layak untuk dijalani.</item>
+        <item>Masa sulit tidak bertahan selamanya, tapi orang tangguh bertahan.</item>
+        <item>Hidupmu memiliki tujuan, meskipun kamu belum melihatnya sekarang.</item>
+        <item>Kamu tidak ditentukan oleh kesalahan yang telah kamu buat.</item>
+        <item>Selalu ada pelangi setelah hujan lebat.</item>
+        <item>Tidak apa-apa untuk merasa tidak apa-apa. Itu adalah bagian dari proses manusiawi.</item>
+        <item>Perlakukan dirimu seperti sahabat terbaikmu—dengan cinta dan dukungan.</item>
+        <item>Ketakutan adalah bagian dari keberanian. Kamu tetap maju meski takut.</item>
+        <item>Jangan lupa untuk merayakan kemenangan kecilmu setiap hari.</item>
+        <item>Meminta bantuan tidak membuatmu lemah. Itu menunjukkan kekuatanmu.</item>
+        <item>Pemulihan bukanlah garis lurus, tapi setiap langkah ke depan sangat berarti.</item>
+        <item>Kamu memiliki hak untuk bahagia dan damai, meskipun hari ini terasa berat.</item>
+        <item>Jangan lupa bahwa kamu sudah melewati masa sulit sebelumnya. Kamu bisa melakukannya lagi.</item>
+        <item>Kamu adalah karya seni yang sedang dalam proses. Teruskan langkahmu.</item>
+        <item>Tidak ada yang salah dengan mulai lagi dari awal. Itu adalah tanda keberanian.</item>
+        <item>Kamu cukup, persis seperti dirimu saat ini.</item>
+        <item>Pemulihan dimulai dengan satu langkah kecil. Ambil langkah itu hari ini.</item>
+        <item>Tidak apa-apa untuk merasa tidak sempurna. Tidak ada manusia yang sempurna.</item>
+        <item>Kamu tidak sendirian dalam perjuanganmu. Ada orang yang siap mendukungmu.</item>
+        <item>Kamu layak mendapatkan cinta, kebahagiaan, dan kesehatan mental yang baik.</item>
+        <item>Jangan menyerah. Setiap hari adalah peluang baru untuk menemukan kebahagiaan.</item>
+    </string-array>
+
 </resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.depresiFragment">
+
+    <Button
+        android:id="@+id/btn_back_depresi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTint="@color/black"
+        app:icon="@drawable/baseline_arrow_back_36"
+        app:iconSize="28dp"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    Buatkan sebuah card view dengan shadow -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_tes_depresi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="56dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_text_depresi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="83dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/secondaryColor"
+            app:strokeWidth="5dp">
+
+            <TextView
+                android:id="@+id/tv_tes_depresi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:fontFamily="@font/nunitoblack"
+                android:text="@string/tes_depresi"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <ImageView
+            android:id="@+id/img_tes_depresi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="108dp"
+            android:layout_marginTop="100dp"
+            android:background="@color/white"
+            android:padding="16dp"
+            android:src="@drawable/tesdepresi"
+            android:textAlignment="center" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_deskripsi_depresi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="260dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/secondaryColor"
+            app:strokeWidth="5dp">
+
+            <TextView
+                android:id="@+id/tv_deskripsi_depresi_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:fontFamily="@font/nunitosemibold"
+                android:text="@string/depresi_adalah_gangguan_kesehatan_mental_yang_ditandai_oleh_perasaan_sedih_yang_mendalam_kehilangan_minat_atau_kesenangan_dalam_aktivitas_sehari_hari_dan_energi_yang_rendah"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_deskripsi_detail_depresi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="370dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/secondaryColor"
+            app:strokeWidth="5dp">
+
+            <TextView
+                android:id="@+id/tv_deskripsi_tambahan_title_depresi_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:fontFamily="@font/nunitoblack"
+                android:text="@string/msambi"
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_deskripsi_2_tambahan_title_depresi_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:text="@string/detail_jelas_dpr"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_button_depresi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="580dp"
+            android:layout_marginBottom="40dp"
+            app:cardBackgroundColor="@color/primaryColor"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <Button
+                android:id="@+id/btn_ambilTesDepresi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/ambil_tes"
+                android:textColor="@color/black" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

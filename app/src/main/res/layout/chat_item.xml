@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="4dp"
+    android:clipToPadding="false">
+
+    <!-- Foto Profil -->
+<ImageView
+    android:id="@+id/profilePicture"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginEnd="12dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/dokter1"
+    android:padding="2dp" />
+
+    <!-- Informasi Chat -->
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+<!-- Nama Pengirim -->
+<TextView
+    android:id="@+id/senderName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="John Doe"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="@android:color/black" />
+
+<!-- Pesan Terakhir -->
+<TextView
+    android:id="@+id/lastMessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello! How are you?"
+    android:textSize="14sp"
+    android:textColor="@android:color/black" />
+</LinearLayout>
+
+    <!-- Waktu Chat -->
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="end|center_vertical"
+        android:text="12:00 PM"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+</LinearLayout>

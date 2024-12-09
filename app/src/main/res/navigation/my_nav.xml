@@ -24,11 +24,6 @@
             app:destination="@id/artikelFragment" />
     </fragment>
     <fragment
-        android:id="@+id/exploreFragment"
-        android:name="com.emocare.application.fragment.ExploreFragment"
-        android:label="fragment_explore"
-        tools:layout="@layout/fragment_explore" />
-    <fragment
         android:id="@+id/emotFragment"
         android:name="com.emocare.application.fragment.EmotFragment"
         android:label="fragment_emot"

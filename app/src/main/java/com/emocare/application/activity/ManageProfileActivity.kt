@@ -67,7 +67,8 @@ class ManageProfileActivity : AppCompatActivity() {
                     }
                 }
                 .addOnFailureListener { e ->
-                    Toast.makeText(this, "Gagal memuat data: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Gagal memuat data: ${e.message}", Toast.LENGTH_SHORT)
+                        .show()
                 }
         }
 
@@ -118,7 +119,8 @@ class ManageProfileActivity : AppCompatActivity() {
                     .update(userData as Map<String, Any>)
                     .addOnSuccessListener {
                         // Show a success message
-                        Toast.makeText(this, "Profil berhasil diperbarui!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Profil berhasil diperbarui!", Toast.LENGTH_LONG)
+                            .show()
 
                         // Set result and finish to notify AccountFragment
                         setResult(RESULT_OK)
@@ -126,7 +128,8 @@ class ManageProfileActivity : AppCompatActivity() {
                     }
                     .addOnFailureListener { e ->
                         // Show an error message
-                        Toast.makeText(this, "Terjadi kesalahan: ${e.message}", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Terjadi kesalahan: ${e.message}", Toast.LENGTH_LONG)
+                            .show()
                     }
             } else {
                 Toast.makeText(this, "Pengguna tidak ditemukan", Toast.LENGTH_SHORT).show()

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/secondaryColor"
+        android:paddingBottom="16dp">
+
+        <!-- Detail Pasien -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Pasien"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textColor="#555555"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Anonim"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin"
+                android:textColor="#555555"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patientGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Laki - Laki"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usia"
+                android:textColor="#555555"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patientAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="20 Tahun"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Telepon"
+                android:textColor="#555555"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patientPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="0822 - 3333 - 4444"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bentuk Konsultasi"
+                android:textColor="#555555"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patientConsultType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telpon/Video Call"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Detail Ahli Kesehatan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Ahli Kesehatan"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="340dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/doctorDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="dr. Amanda Charoline Sp.Kj\nRS Gandaria, Jakarta Selatan\nDKI Jakarta\n1 November 2023\n12.00 WIB - 13.00 WIB"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Detail Pembayaran -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Pembayaran"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="6dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/paymentDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Biaya Konsultasi: Rp. 50.000\nBiaya Aplikasi: Rp. 2.000\nDiskon: -\nTotal: Rp. 52.000"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Metode Pembayaran -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metode Pembayaran"
+            android:layout_marginLeft="6dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/paymentMethods"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="16dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dana" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OVO" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indomaret" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BRI" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mandiri" />
+        </RadioGroup>
+
+        <!-- Tombol Konfirmasi -->
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi"
+            android:backgroundTint="#888888"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="45dp"/>
+    </LinearLayout>
+</ScrollView>

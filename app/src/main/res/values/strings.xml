@@ -165,4 +165,13 @@
     </string-array>
 
 
+    <string name="consultation_orders">Pesanan Konsultasi</string>
+    <string name="profile_image_description">User profile picture</string>
+    <string name="profile_name_default">Anonim</string>
+    <string name="profile_phone_number">085894378743</string>
+    <string name="manage_button_text">Kelola</string>
+    <string name="transaction_history_button">Riwayat Transaksi</string>
+    <string name="settings_button">Pengaturan</string>
+    <string name="followers_count">Pengikut: 666</string>
+    <string name="following_count">Mengikuti: 999</string>
 </resources>

@@ -25,6 +25,7 @@ class HomeFragment : Fragment() {
     private lateinit var btnCounselling: ImageButton
     private lateinit var btnTes: ImageButton
     private lateinit var btntesKejiwaan: Button
+    private lateinit var btnArtikel: ImageButton
     private lateinit var tvHelloUser: TextView
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
@@ -56,6 +57,7 @@ class HomeFragment : Fragment() {
         btnCounselling = view.findViewById(R.id.btn_counselling)
         btnTes = view.findViewById(R.id.btn_tes_kejiwaan)
         btntesKejiwaan = view.findViewById(R.id.btn_tes_kejiwaan_2)
+        btnArtikel = view.findViewById(R.id.btn_artikel_home)
 
         // Ambil nama pengguna dari Firestore dan tampilkan
         val currentUser = auth.currentUser
@@ -111,6 +113,12 @@ class HomeFragment : Fragment() {
         btnCounselling.setOnClickListener {
             findNavController().popBackStack(R.id.homeFragment, false)
             findNavController().navigate(R.id.action_homeFragment_to_counselingFragment)
+        }
+
+        // Set listener untuk tombol artikel
+        btnArtikel.setOnClickListener {
+            findNavController().popBackStack(R.id.homeFragment, false)
+            findNavController().navigate(R.id.action_homeFragment_to_artikelFragment)
         }
 
         // Set listener untuk tombol tes

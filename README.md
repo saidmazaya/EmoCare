@@ -11,3 +11,4 @@
 - **M. Farel Azhar (221402111)**
 - **Umar Hilmi (221402077)**
 - **Khara Kiasaty (221402002)** 
+- **Adelia Naibaho (221402061)**

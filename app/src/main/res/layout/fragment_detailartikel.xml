@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#9DB0CE"
-    tools:context=".detailartikel">
+    tools:context=".fragment.Detailartikel">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,39 +13,39 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-    <!-- Tombol Kembali -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <!-- Tombol Kembali -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <!-- Tombol Kembali -->
-            <ImageButton
-                android:id="@+id/btn_back_depresi"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@null"
-                android:src="@drawable/baseline_arrow_back_36"
-                android:contentDescription="Back"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+                <!-- Tombol Kembali -->
+                <ImageButton
+                    android:id="@+id/btn_back_depresi"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:contentDescription="Back"
+                    android:src="@drawable/baseline_arrow_back_36"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
             android:text="Emo Care"
             android:textSize="13sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="12dp" />
+            android:textStyle="bold" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -58,8 +58,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="vertical"
                 android:background="@drawable/artikel_bg"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <!-- Judul Artikel -->
@@ -67,37 +67,37 @@
                     android:id="@+id/article_title_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mengapa Kesehatan Mental itu Penting"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
+                    android:gravity="center"
                     android:padding="12dp"
+                    android:text="Mengapa Kesehatan Mental itu Penting"
                     android:textColor="@android:color/black"
-                    android:gravity="center"/>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/article_image"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/article_1"
-                    android:scaleType="fitCenter"
                     android:layout_marginTop="12dp"
-                    android:contentDescription="Gambar Artikel" />
+                    android:contentDescription="Gambar Artikel"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/article_1" />
                 <!-- Tanggal Artikel -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="16dp"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <!-- Gambar Profil -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_marginEnd="12dp"
+                        app:cardBackgroundColor="@android:color/white"
                         app:cardCornerRadius="30dp"
                         app:cardElevation="4dp"
-                        app:cardBackgroundColor="@android:color/white"
                         app:cardPreventCornerOverlap="true"
                         app:cardUseCompatPadding="true">
 
@@ -105,8 +105,8 @@
                             android:id="@+id/profile_image"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/article_1"
-                            android:scaleType="centerCrop" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/article_1" />
 
                     </com.google.android.material.card.MaterialCardView>
 
@@ -122,7 +122,7 @@
                             android:id="@+id/profile_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="EL CARLOS ARDUINO"
+                            android:text="Emo Care"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -131,10 +131,10 @@
                             android:id="@+id/article_date_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
                             android:text="Nov 15 - 4 min read"
                             android:textColor="@android:color/darker_gray"
-                            android:textSize="12sp"
-                            android:layout_marginTop="4dp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -146,11 +146,11 @@
                         android:id="@+id/article_content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
                         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur"
-                        android:textSize="16sp"
                         android:textColor="@android:color/black"
-                        android:lineSpacingExtra="4dp" />
+                        android:textSize="16sp" />
                 </ScrollView>
 
             </LinearLayout>

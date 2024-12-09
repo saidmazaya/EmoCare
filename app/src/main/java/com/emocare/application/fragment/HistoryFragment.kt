@@ -60,6 +60,7 @@ class HistoryFragment : Fragment() {
                 requireActivity().onBackPressed()
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

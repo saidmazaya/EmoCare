@@ -49,7 +49,11 @@
         android:id="@+id/accountFragment"
         android:name="com.emocare.application.fragment.AccountFragment"
         android:label="fragment_account"
-        tools:layout="@layout/fragment_account" />
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gangguanKecemasan"
         android:name="com.emocare.application.fragment.gangguanKecemasan"
@@ -126,4 +130,9 @@
             android:id="@+id/action_detailartikel_to_artikelFragment"
             app:destination="@id/artikelFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.emocare.application.fragment.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

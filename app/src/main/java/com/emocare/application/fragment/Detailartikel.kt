@@ -24,7 +24,7 @@ class Detailartikel : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Tombol kembali
-        val btnBack: ImageButton = view.findViewById(R.id.btn_back_depresi)
+        val btnBack: ImageButton = view.findViewById(R.id.btn_back_dari_detail_artikel)
         btnBack.setOnClickListener {
             findNavController().navigateUp()
         }
@@ -181,13 +181,14 @@ class Detailartikel : Fragment() {
                 articleImage.setImageResource(R.drawable.article_5)
                 profileImage.setImageResource(R.drawable.article_5)
             }
-        else -> {
-            titleTextView.text = "Artikel Tidak Ditemukan"
-            articleDate.text = "Tidak Diketahui"
-            articleContent.text = "Maaf, artikel yang Anda cari tidak tersedia."
-            articleImage.setImageResource(R.drawable.ic_doctor)
-            profileImage.setImageResource(R.drawable.ic_doctor)
+
+            else -> {
+                titleTextView.text = "Artikel Tidak Ditemukan"
+                articleDate.text = "Tidak Diketahui"
+                articleContent.text = "Maaf, artikel yang Anda cari tidak tersedia."
+                articleImage.setImageResource(R.drawable.ic_doctor)
+                profileImage.setImageResource(R.drawable.ic_doctor)
+            }
         }
     }
-}
 }

@@ -6,12 +6,13 @@
     android:background="@drawable/gradient_background">
 
     <!-- Toolbar -->
+
     <ImageView
         android:id="@+id/back_arrow"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:contentDescription="Back"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="38dp"
         android:text="Kelola Profil"
         android:textColor="#000000"
         android:textSize="18sp"

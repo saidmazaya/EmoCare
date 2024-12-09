@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.emocare.application.R
 
 class ArtikelFragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +32,11 @@ class ArtikelFragment : Fragment() {
             Pair(R.id.artikel_keempat, "Apa Itu Serangan Panik?"),
             Pair(R.id.artikel_kelima, "Terjawab: 7 Mitos tentang Kesehatan Mental")
         )
+
+        val btnBack: ImageButton = view.findViewById(R.id.btn_back_dari_artikel)
+        btnBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
 
         // Set tombol klik untuk setiap artikel
         articles.forEach { (buttonId, title) ->

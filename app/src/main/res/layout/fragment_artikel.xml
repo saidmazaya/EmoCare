@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background = "#9DB0CE"
-    tools:context=".ArtikelFragment">
+    android:background="#9DB0CE"
+    tools:context=".fragment.ArtikelFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,12 +25,12 @@
 
                 <!-- Tombol Kembali -->
                 <ImageButton
-                    android:id="@+id/btn_back_depresi"
+                    android:id="@+id/btn_back_dari_artikel"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:background="@null"
-                    android:src="@drawable/baseline_arrow_back_36"
                     android:contentDescription="Back"
+                    android:src="@drawable/baseline_arrow_back_36"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,12 +41,12 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
             android:text="Cari tau yuk!"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp" />
+            android:textStyle="bold" />
 
         <!-- Daftar Artikel -->
         <ScrollView
@@ -59,18 +59,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:dividerDrawable="@drawable/divider"
                 android:showDividers="middle">
 
                 <!-- Artikel 1 -->
                 <LinearLayout
+                    android:id="@+id/artikel_pertama"
                     android:layout_width="372dp"
                     android:layout_height="128dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/artikel_bg"
-                    android:padding="16dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="12dp"
-                    android:layout_gravity="center_horizontal">
+                    android:background="@drawable/artikel_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="120dp"
@@ -88,9 +90,9 @@
                     <LinearLayout
                         android:layout_width="175dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_gravity="center_vertical">
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/article_title_1"
@@ -115,13 +117,16 @@
 
                 <!-- Artikel 2 -->
                 <LinearLayout
+                    android:id="@+id/artikel_kedua"
                     android:layout_width="372dp"
                     android:layout_height="128dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/artikel_bg"
-                    android:padding="16dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="12dp"
-                    android:layout_gravity="center_horizontal">
+                    android:background="@drawable/artikel_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="120dp"
@@ -166,13 +171,16 @@
 
                 <!-- Artikel 3 -->
                 <LinearLayout
+                    android:id="@+id/artikel_ketiga"
                     android:layout_width="372dp"
                     android:layout_height="128dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/artikel_bg"
-                    android:padding="16dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="12dp"
-                    android:layout_gravity="center_horizontal">
+                    android:background="@drawable/artikel_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="120dp"
@@ -217,13 +225,16 @@
 
                 <!-- Artikel 4 -->
                 <LinearLayout
+                    android:id="@+id/artikel_keempat"
                     android:layout_width="372dp"
                     android:layout_height="128dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/artikel_bg"
-                    android:padding="16dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="12dp"
-                    android:layout_gravity="center_horizontal">
+                    android:background="@drawable/artikel_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="120dp"
@@ -268,13 +279,16 @@
 
                 <!-- Artikel 5 -->
                 <LinearLayout
+                    android:id="@+id/artikel_kelima"
                     android:layout_width="372dp"
                     android:layout_height="128dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/artikel_bg"
-                    android:padding="16dp"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="12dp"
-                    android:layout_gravity="center_horizontal">
+                    android:background="@drawable/artikel_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="120dp"

@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_emotFragment"
             app:destination="@id/emotFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_artikelFragment"
+            app:destination="@id/artikelFragment" />
     </fragment>
     <fragment
         android:id="@+id/exploreFragment"
@@ -102,4 +105,25 @@
         android:name="com.emocare.application.fragment.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/artikelFragment"
+        android:name="com.emocare.application.fragment.ArtikelFragment"
+        android:label="fragment_artikel"
+        tools:layout="@layout/fragment_artikel" >
+        <action
+            android:id="@+id/action_artikelFragment_to_detailartikel"
+            app:destination="@id/detailartikel" />
+        <action
+            android:id="@+id/action_artikelFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailartikel"
+        android:name="com.emocare.application.fragment.Detailartikel"
+        android:label="fragment_detailartikel"
+        tools:layout="@layout/fragment_detailartikel" >
+        <action
+            android:id="@+id/action_detailartikel_to_artikelFragment"
+            app:destination="@id/artikelFragment" />
+    </fragment>
 </navigation>

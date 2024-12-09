@@ -12,3 +12,7 @@
 - **Umar Hilmi (221402077)**
 - **Khara Kiasaty (221402002)** 
 - **Adelia Naibaho (221402061)**
+
+## Installation
+- Lakukan `git clone https://github.com/saidmazaya/EmoCare.git` di Android Studio
+- Run di Android Studio atau Melalui Build APK

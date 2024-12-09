@@ -109,11 +109,6 @@ class MainActivity : AppCompatActivity() {
                         true
                     }
 
-                    R.id.exploreFragment -> {
-                        navController.navigateWithClearStack(R.id.exploreFragment)
-                        true
-                    }
-
                     R.id.emotFragment -> {
                         navController.navigateWithClearStack(R.id.emotFragment)
                         true

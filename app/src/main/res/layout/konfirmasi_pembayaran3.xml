@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9F9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Konfirmasi Pembayaran"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <!-- Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:background="#D8DADE"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/baseline_check_circle_outline_24"
+                android:contentDescription="Check Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Klik untuk mengonfirmasi pembayaran"
+                android:textColor="#4A4A4A"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal:                                                  05 December 2022"
+                    android:textSize="14sp"
+                    android:textColor="#4A4A4A" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Referensi:                                          54463873456"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#4A4A4A" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Pengirim:                                                                     Anonim"
+                    android:textSize="14sp"
+                    android:textColor="#4A4A4A" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Penerima:                                                                 EmoCare"
+                    android:textSize="14sp"
+                    android:textColor="#4A4A4A" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Total transfer:                                                       Rp. 52.000"
+                    android:textSize="14sp"
+                    android:textColor="#4A4A4A" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Biaya Transfer:                                                       Rp. 1.000"
+                    android:textSize="14sp"
+                    android:textColor="#4A4A4A" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Total:                                                            Rp. 53.000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Button -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bayar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2196F3"
+            android:paddingVertical="12dp"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

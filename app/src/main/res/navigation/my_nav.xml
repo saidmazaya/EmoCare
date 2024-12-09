@@ -35,7 +35,14 @@
         android:id="@+id/counselingFragment"
         android:name="com.emocare.application.fragment.CounselingFragment"
         android:label="fragment_counseling"
-        tools:layout="@layout/fragment_counseling" />
+        tools:layout="@layout/fragment_counseling" >
+        <action
+            android:id="@+id/action_counselingFragment_to_detailCounselling"
+            app:destination="@id/detailCounselling" />
+        <action
+            android:id="@+id/action_counselingFragment_to_psikologFragment"
+            app:destination="@id/psikologFragment" />
+    </fragment>
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.emocare.application.fragment.AccountFragment"
@@ -96,4 +103,94 @@
         android:name="com.emocare.application.fragment.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/psikologFragment"
+        android:name="com.emocare.application.fragment.PsikologFragment"
+        android:label="Psikolog_fragment"
+        tools:layout="@layout/fragment_detail_counseling" >
+        <action
+            android:id="@+id/action_psikologFragment_to_counselingFragment"
+            app:destination="@id/counselingFragment" />
+        <action
+            android:id="@+id/action_psikologFragment_to_detail3CounsellingFragment"
+            app:destination="@id/detail3CounsellingFragment" />
+    </fragment>
+    <!-- Counseling Fragment -->
+
+    <!-- Detail Fragment -->
+<!--    <fragment-->
+<!--        android:id="@+id/detailFragment"-->
+<!--        android:name="com.emocare.application.fragment.DetailFragment"-->
+<!--        android:label="Detail"-->
+<!--        tools:layout="@layout/fragment_detail_stress" />-->
+    <fragment
+        android:id="@+id/detailCounselling"
+        android:name="com.emocare.application.fragment.DetailCounselling"
+        android:label="fragment_detail_stress_counsel"
+        tools:layout="@layout/fragment_detail_stress_counsel" >
+        <action
+            android:id="@+id/action_detailCounselling_pop"
+            app:popUpTo="@id/counselingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detailCounselling_to_counselingFragment"
+            app:destination="@id/counselingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail3CounsellingFragment"
+        android:name="com.emocare.application.fragment.Detail3CounsellingFragment"
+        android:label="Detail3CounsellingFragment" >
+        <action
+            android:id="@+id/action_detail3CounsellingFragment_to_detail4CounselingFragment"
+            app:destination="@id/detail4CounselingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail4CounselingFragment"
+        android:name="com.emocare.application.fragment.detail4CounselingFragment"
+        android:label="detail4CounselingFragment" >
+        <action
+            android:id="@+id/action_detail4CounselingFragment_to_detail5CounselingFragment"
+            app:destination="@id/detail5CounselingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail5CounselingFragment"
+        android:name="com.emocare.application.fragment.detail5CounselingFragment"
+        android:label="detail5CounselingFragment" >
+        <action
+            android:id="@+id/action_detail5CounselingFragment_to_konfirmasiPembayaranFragment"
+            app:destination="@id/konfirmasiPembayaranFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/konfirmasiPembayaranFragment"
+        android:name="com.emocare.application.fragment.konfirmasiPembayaranFragment"
+        android:label="konfirmasiPembayaranFragment" >
+        <action
+            android:id="@+id/action_konfirmasiPembayaranFragment_to_konfirmasiPembayaran2Fragment"
+            app:destination="@id/konfirmasiPembayaran2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/konfirmasiPembayaran2Fragment"
+        android:name="com.emocare.application.fragment.konfirmasiPembayaran2Fragment"
+        android:label="konfirmasiPembayaran2Fragment" >
+        <action
+            android:id="@+id/action_konfirmasiPembayaran2Fragment_to_konfrimasiPembayaran3Fragment"
+            app:destination="@id/konfrimasiPembayaran3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/konfrimasiPembayaran3Fragment"
+        android:name="com.emocare.application.fragment.konfrimasiPembayaran3Fragment"
+        android:label="konfrimasiPembayaran3Fragment" >
+        <action
+            android:id="@+id/action_konfrimasiPembayaran3Fragment_to_konfrimasiPembayaran4Fragment"
+            app:destination="@id/konfrimasiPembayaran4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/konfrimasiPembayaran4Fragment"
+        android:name="com.emocare.application.fragment.KonfrimasiPembayaran4Fragment"
+        android:label="KonfrimasiPembayaran4Fragment" >
+        <action
+            android:id="@+id/action_konfrimasiPembayaran4Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

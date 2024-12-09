@@ -590,7 +590,7 @@
                             app:strokeWidth="5dp">
 
                             <Button
-                                android:id="@+id/btn_tesmui_pisokolog_2"
+                                android:id="@+id/btn_temui_pisokolog_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@android:color/transparent"

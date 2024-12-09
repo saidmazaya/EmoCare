@@ -153,7 +153,7 @@
 
         <!-- Tombol Konfirmasi -->
         <Button
-            android:id="@+id/btnConfirm"
+            android:id="@+id/btn_konfirmasi_ke_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#9747FF"

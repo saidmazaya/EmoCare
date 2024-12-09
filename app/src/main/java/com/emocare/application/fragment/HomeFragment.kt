@@ -32,6 +32,8 @@ class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: QuoteAdapter
     private lateinit var quotes: List<String>
+    private lateinit var btnTemuiPsikolog: ImageButton
+    private lateinit var btnTemuiPsikolog2: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +60,8 @@ class HomeFragment : Fragment() {
         btnTes = view.findViewById(R.id.btn_tes_kejiwaan)
         btntesKejiwaan = view.findViewById(R.id.btn_tes_kejiwaan_2)
         btnArtikel = view.findViewById(R.id.btn_artikel_home)
+        btnTemuiPsikolog = view.findViewById(R.id.img_btn_temui_psikolog)
+        btnTemuiPsikolog2 = view.findViewById(R.id.btn_temui_pisokolog_2)
 
         // Ambil nama pengguna dari Firestore dan tampilkan
         val currentUser = auth.currentUser
@@ -120,6 +124,18 @@ class HomeFragment : Fragment() {
             findNavController().popBackStack(R.id.homeFragment, false)
             findNavController().navigate(R.id.action_homeFragment_to_artikelFragment)
         }
+
+        // Set listener untuk tombol temui psikolog
+        btnTemuiPsikolog.setOnClickListener {
+            findNavController().popBackStack(R.id.homeFragment, false)
+            findNavController().navigate(R.id.action_homeFragment_to_psikologFragment)
+        }
+
+        btnTemuiPsikolog2.setOnClickListener {
+            findNavController().popBackStack(R.id.homeFragment, false)
+            findNavController().navigate(R.id.action_homeFragment_to_psikologFragment)
+        }
+
 
         // Set listener untuk tombol tes
         btnTes.setOnClickListener {

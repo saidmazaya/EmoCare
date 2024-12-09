@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F9FF"
@@ -14,15 +15,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
             android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_back"
                 android:contentDescription="Back"
+                android:src="@drawable/ic_back"
                 android:tint="#000000" />
 
             <TextView
@@ -40,114 +41,114 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total"
-            android:textSize="16sp"
-            android:textColor="#8E8E93"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="4dp" />
+            android:layout_marginBottom="4dp"
+            android:text="Total"
+            android:textColor="#8E8E93"
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rp. 53.000"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="#4E3629"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:text="Rp. 53.000"
+            android:textColor="#4E3629"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
         <!-- Transfer Details -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
             android:background="#F8F9FF"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Transfer Details"
-                android:textSize="14sp"
-                android:textStyle="bold"
                 android:textColor="#4E3629"
-                android:layout_marginBottom="8dp" />
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginBottom="4dp">
+                android:weightSum="2">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Total transfer"
-                    android:textSize="14sp"
-                    android:textColor="#8E8E93" />
+                    android:textColor="#8E8E93"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="end"
                     android:text="Rp. 52.000"
-                    android:textSize="14sp"
                     android:textColor="#000000"
-                    android:gravity="end" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginBottom="4dp">
+                android:weightSum="2">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Biaya Aplikasi"
-                    android:textSize="14sp"
-                    android:textColor="#8E8E93" />
+                    android:textColor="#8E8E93"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="end"
                     android:text="Rp. 1.000"
-                    android:textSize="14sp"
                     android:textColor="#000000"
-                    android:gravity="end" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginBottom="4dp">
+                android:weightSum="2">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Total"
+                    android:textColor="#8E8E93"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:textColor="#8E8E93" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="end"
                     android:text="Rp. 53.000"
-                    android:textSize="14sp"
                     android:textColor="#32A852"
-                    android:gravity="end" />
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -155,35 +156,38 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginBottom="32dp"
             android:background="@color/white"
-            android:padding="12dp"
-            android:layout_marginBottom="32dp">
+            android:orientation="horizontal"
+            android:padding="12dp">
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/btn_konfirmasi_pertama"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:src="@drawable/baseline_check_box_24"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/transparent"
                 android:contentDescription="Info"
-                android:layout_marginEnd="8dp" />
+                android:src="@drawable/baseline_crop_square_24"
+                app:tint="#32A852" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Pembayaranmu akan ditransfer ketika kami me-klik tombol konfirmasi"
-                android:textSize="14sp"
-                android:textColor="#32A852" />
+                android:textColor="#32A852"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <!-- Confirm Button -->
         <Button
-            android:id="@+id/btnConfirmTransfer"
+            android:id="@+id/btn_konfirmasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Konfirmasi Transfer"
-            android:backgroundTint="#007AFF"
-            android:textColor="#FFFFFF"
             android:layout_marginBottom="16dp"
-            android:elevation="4dp" />
+            android:backgroundTint="@color/md_theme_outlineVariant_mediumContrast"
+            android:elevation="4dp"
+            android:text="Konfirmasi Transfer"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 </ScrollView>

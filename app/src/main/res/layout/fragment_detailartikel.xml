@@ -25,7 +25,7 @@
 
                 <!-- Tombol Kembali -->
                 <ImageButton
-                    android:id="@+id/btn_back_depresi"
+                    android:id="@+id/btn_back_dari_detail_artikel"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:background="@null"
@@ -140,8 +140,8 @@
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp">
 
                     <TextView
                         android:id="@+id/article_content"

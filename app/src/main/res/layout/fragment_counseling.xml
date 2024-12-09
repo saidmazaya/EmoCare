@@ -51,10 +51,13 @@
 
                     <!-- stress -->
                     <LinearLayout
+                        android:id="@+id/btn_stress"
                         android:layout_width="90dp"
                         android:layout_height="140dp"
                         android:layout_margin="8dp"
                         android:background="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="12dp">
@@ -76,10 +79,13 @@
 
                     <!-- gangguan kecemasan -->
                     <LinearLayout
+                        android:id="@+id/btn_gangguan_kecemasan_detail"
                         android:layout_width="90dp"
                         android:layout_height="140dp"
                         android:layout_margin="8dp"
                         android:background="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="12dp">
@@ -101,10 +107,13 @@
 
                     <!-- depresi -->
                     <LinearLayout
+                        android:id="@+id/btn_depresi_detail"
                         android:layout_width="90dp"
                         android:layout_height="140dp"
                         android:layout_margin="8dp"
                         android:background="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="12dp">
@@ -126,10 +135,13 @@
 
                     <!-- keluarga dan hubungan -->
                     <LinearLayout
+                        android:id="@+id/btn_keluarga_dan_hubungan"
                         android:layout_width="95dp"
                         android:layout_height="140dp"
                         android:layout_margin="8dp"
                         android:background="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="12dp">
@@ -151,10 +163,13 @@
 
                     <!-- trauma -->
                     <LinearLayout
+                        android:id="@+id/btn_trauma"
                         android:layout_width="90dp"
                         android:layout_height="140dp"
                         android:layout_margin="8dp"
                         android:background="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="12dp">
@@ -176,10 +191,13 @@
 
                     <!-- gangguan mood -->
                     <LinearLayout
+                        android:id="@+id/btn_gangguan_mood"
                         android:layout_width="90dp"
                         android:layout_height="140dp"
                         android:layout_margin="8dp"
                         android:background="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="12dp">
@@ -222,11 +240,13 @@
                 android:textSize="16sp" />
 
             <LinearLayout
+                android:id="@+id/btn_pilih_psikolog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:background="#FFFFFF"
-                android:onClick="pilihpsikolog"
+                android:clickable="true"
+                android:focusable="true"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
@@ -244,81 +264,81 @@
                     android:text="Pilih Psikolog\nJika kamu perlu asesmen kesehatan mental dan bantuan konseling." />
             </LinearLayout>
 
-            <!-- Pilih Psikiater -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:onClick="pilihpsikiater"
-                android:orientation="horizontal"
-                android:padding="8dp">
+<!--            &lt;!&ndash; Pilih Psikiater &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#FFFFFF"-->
+<!--                android:onClick="pilihpsikiater"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:padding="8dp">-->
 
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/ic_psikiater" />
+<!--                <ImageView-->
+<!--                    android:layout_width="48dp"-->
+<!--                    android:layout_height="48dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:src="@drawable/ic_psikiater" />-->
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/nunitobold"
-                    android:text="Pilih Psikiater\nJika kamu perlu penanganan lebih intensif atau terapi pengobatan." />
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:fontFamily="@font/nunitobold"-->
+<!--                    android:text="Pilih Psikiater\nJika kamu perlu penanganan lebih intensif atau terapi pengobatan." />-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:gravity="center"
-                android:orientation="vertical"></LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginBottom="16dp"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical"></LinearLayout>-->
         </LinearLayout>
 
         <!-- Button Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="3">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="3">-->
 
-            <Button
-                android:id="@+id/btn_psikolog"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Konseling Via Chat"
-                android:textColor="@color/black"
-                android:textSize="8sp" />
+<!--            <Button-->
+<!--                android:id="@+id/btn_psikolog"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_margin="8dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:text="Konseling Via Chat"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="8sp" />-->
 
 
-            <Button
-                android:id="@+id/btn_psikiater"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Konseling Via Panggilan"
-                android:textColor="@color/black"
-                android:textSize="8sp" />
+<!--            <Button-->
+<!--                android:id="@+id/btn_psikiater"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_margin="8dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:text="Konseling Via Panggilan"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="8sp" />-->
 
-            <Button
-                android:id="@+id/btn_konseling"
-                android:layout_width="0dp"
-                android:layout_height="60dp"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:text="Buat Janji Tatap Muka"
-                android:textColor="@color/black"
-                android:textSize="8sp" />
-        </LinearLayout>
+<!--            <Button-->
+<!--                android:id="@+id/btn_konseling"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_margin="8dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:text="Buat Janji Tatap Muka"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="8sp" />-->
+<!--        </LinearLayout>-->
     </LinearLayout>
 </ScrollView>

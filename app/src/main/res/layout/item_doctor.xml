@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
     android:padding="16dp"
+    app:cardCornerRadius="8dp"
     app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="159dp">
 
         <!-- Foto Dokter -->
+
+        <!-- Nama Dokter -->
+
+        <!-- Spesialisasi -->
+
         <ImageView
             android:id="@+id/doctorImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginStart="16dp"
             android:contentDescription="@string/doctor_image"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.423" />
 
-        <!-- Nama Dokter -->
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
@@ -38,7 +43,6 @@
             app:layout_constraintStart_toEndOf="@+id/doctorImage"
             app:layout_constraintTop_toTopOf="@+id/doctorImage" />
 
-        <!-- Spesialisasi -->
         <TextView
             android:id="@+id/tvSpecialization"
             android:layout_width="wrap_content"
@@ -58,33 +62,46 @@
             android:text="5 Tahun"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/tvName"
-            app:layout_constraintTop_toBottomOf="@+id/tvSpecialization" />
+            app:layout_constraintTop_toBottomOf="@+id/tvSpecialization" />        <!-- Pengalaman -->
+        <TextView
+            android:id="@+id/tvGenderDokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="5 Tahun"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvExperience" />
 
         <!-- Harga -->
+
+        <!-- Tombol Pilih -->
+
         <TextView
             android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
             android:text="Rp. 50.000"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/doctorImage"
-            app:layout_constraintTop_toBottomOf="@+id/tvExperience" />
+            app:layout_constraintTop_toBottomOf="@+id/tvGenderDokter" />
 
-        <!-- Tombol Pilih -->
         <Button
-            android:id="@+id/btnSelect"
+            android:id="@+id/btnSelectPsikolog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
             android:backgroundTint="#9747FF"
             android:text="Pilih"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/doctorImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

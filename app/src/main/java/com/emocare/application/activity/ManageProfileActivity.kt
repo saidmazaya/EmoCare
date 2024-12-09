@@ -1,6 +1,7 @@
 package com.emocare.application.activity
 
 import android.app.DatePickerDialog
+import android.app.ProgressDialog
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -25,10 +26,17 @@ class ManageProfileActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()  // Firestore instance
     private val auth = FirebaseAuth.getInstance()  // FirebaseAuth instance
 
+    private lateinit var progressDialog: ProgressDialog  // Declare ProgressDialog
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_manage_profile)
+
+        // Initialize ProgressDialog
+        progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("Menyimpan perubahan...")
+        progressDialog.setCancelable(false)
 
         // Find the back arrow ImageView
         val backArrow = findViewById<ImageView>(R.id.back_arrow)
@@ -94,7 +102,6 @@ class ManageProfileActivity : AppCompatActivity() {
         }
 
         // Button save action
-// Button save action
         saveButton.setOnClickListener {
             val fullName = fullNameEditText.text.toString()
             val birthDate = birthDateTextView.text.toString()
@@ -107,6 +114,9 @@ class ManageProfileActivity : AppCompatActivity() {
             }
 
             if (userId != null) {
+                // Show ProgressDialog before starting the update operation
+                progressDialog.show()
+
                 // Create a map with the updated user data
                 val userData = hashMapOf(
                     "name" to fullName,
@@ -118,6 +128,9 @@ class ManageProfileActivity : AppCompatActivity() {
                 db.collection("users").document(userId)
                     .update(userData as Map<String, Any>)
                     .addOnSuccessListener {
+                        // Dismiss ProgressDialog on success
+                        progressDialog.dismiss()
+
                         // Show a success message
                         Toast.makeText(this, "Profil berhasil diperbarui!", Toast.LENGTH_LONG)
                             .show()
@@ -127,6 +140,9 @@ class ManageProfileActivity : AppCompatActivity() {
                         finish()  // Close the activity and return to AccountFragment
                     }
                     .addOnFailureListener { e ->
+                        // Dismiss ProgressDialog on failure
+                        progressDialog.dismiss()
+
                         // Show an error message
                         Toast.makeText(this, "Terjadi kesalahan: ${e.message}", Toast.LENGTH_LONG)
                             .show()
@@ -135,6 +151,5 @@ class ManageProfileActivity : AppCompatActivity() {
                 Toast.makeText(this, "Pengguna tidak ditemukan", Toast.LENGTH_SHORT).show()
             }
         }
-
     }
 }
